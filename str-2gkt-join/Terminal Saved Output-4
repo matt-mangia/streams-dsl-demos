@@ -1,0 +1,184 @@
+Last login: Mon Jul 29 15:06:57 on ttys008
+Matthew-Mangias-MBP15:bin matthew.mangia$ ls
+confluent				kafka-reassign-partitions
+confluent-hub				kafka-replica-verification
+confluent-rebalancer			kafka-rest-run-class
+connect-distributed			kafka-rest-start
+connect-standalone			kafka-rest-stop
+connect.stdout				kafka-rest-stop-service
+control-center-3_0_0-reset		kafka-run-class
+control-center-3_0_1-reset		kafka-server-start
+control-center-console-consumer		kafka-server-stop
+control-center-export			kafka-streams-application-reset
+control-center-reset			kafka-topics
+control-center-run-class		kafka-verifiable-consumer
+control-center-set-acls			kafka-verifiable-producer
+control-center-start			ksql
+control-center-stop			ksql-datagen
+decrypted.txt				ksql-print-metrics
+kafka-acls				ksql-run-class
+kafka-api-start				ksql-server-start
+kafka-avro-console-consumer		ksql-server-stop
+kafka-avro-console-producer		ksql-stop
+kafka-broker-api-versions		ksql-test-runner
+kafka-configs				replicator
+kafka-console-consumer			schema-registry-run-class
+kafka-console-producer			schema-registry-start
+kafka-consumer-groups			schema-registry-stop
+kafka-consumer-perf-test		schema-registry-stop-service
+kafka-delegation-tokens			security-plugins-run-class
+kafka-delete-records			sr-acl-cli
+kafka-dump-log				stub-api-run-class
+kafka-log-dirs				stub-api-start
+kafka-mirror-maker			support-metrics-bundle
+kafka-mqtt-run-class			windows
+kafka-mqtt-start			zookeeper-security-migration
+kafka-mqtt-stop				zookeeper-server-start
+kafka-preferred-replica-election	zookeeper-server-stop
+kafka-producer-perf-test		zookeeper-shell
+Matthew-Mangias-MBP15:bin matthew.mangia$ cd /tmp/kafka-
+kafka-logs/                  kafka-streams/               kafka-streams-global-tables/ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ cd /tmp/kafka-streams-global-tables/
+Matthew-Mangias-MBP15:kafka-streams-global-tables matthew.mangia$ ls
+global-tables-example
+Matthew-Mangias-MBP15:kafka-streams-global-tables matthew.mangia$ cd global-tables-example/
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ls
+0_0	global
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ cd 0_0/.lock 
+0_0/    global/ 
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ cd 0_0/.lock 
+0_0/    global/ 
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ cd 0_0/
+Matthew-Mangias-MBP15:0_0 matthew.mangia$ ls
+Matthew-Mangias-MBP15:0_0 matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ls *
+0_0:
+
+global:
+rocksdb
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ls
+0_0	global
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ cd global/
+Matthew-Mangias-MBP15:global matthew.mangia$ ls
+rocksdb
+Matthew-Mangias-MBP15:global matthew.mangia$ cd rocksdb/
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ ls
+threat-store
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ cd threat-store/
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ ls
+000003.log	000008.sst	CURRENT		LOCK		MANIFEST-000007
+000006.sst	000009.sst	IDENTITY	LOG		OPTIONS-000005
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ less CURRENT 
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ less 000003.log 
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ less LOG
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ less IDENTITY 
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:global matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ls
+0_0	global
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:kafka-streams-global-tables matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:tmp matthew.mangia$ ls
+00CDC7D7-CDA3-42C6-B1D5-BDD2A7DE2DDE	self_protect_comm
+3BD417A6-2E18-4B55-953D-80631C3B0D45	testing
+7A3958E7-143E-4316-BB1E-2792C90E8578	tmp000023b9
+7FE2599E-7C18-495A-AA69-1FF91C051E12	wbxTelemetryCache.txt
+com.apple.launchd.1uFVa7rjCK		wbxtra_07152019_111911.wbt
+com.apple.launchd.qaEVNCVaJN		wbxtra_07152019_180011.wbt
+com.epsecurity.dmg			wbxtra_07152019_192149.wbt
+finishUpdate.log			wbxtra_07162019_105755.wbt
+kafka-logs				wbxtra_07172019_110123.wbt
+kafka-streams				wbxtra_07182019_110008.wbt
+kafka-streams-global-tables		wbxtra_07222019_110045.wbt
+missed					wbxtra_07232019_105941.wbt
+pulseHghCCH				wbxtra_07242019_110049.wbt
+pulseIdXI2A				wbxtra_07252019_110041.wbt
+pulsel7eMv4				wbxtrace
+pulseoPRFNv
+Matthew-Mangias-MBP15:tmp matthew.mangia$ cd kafka-streams-global-tables/
+Matthew-Mangias-MBP15:kafka-streams-global-tables matthew.mangia$ ls
+global-tables-example
+Matthew-Mangias-MBP15:kafka-streams-global-tables matthew.mangia$ cd global-tables-example/
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ls
+0_0	global
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ cd global/
+.checkpoint  .lock        rocksdb/     
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ cd global/rocksdb/threat-store/
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ ls
+000003.log	000008.sst	IDENTITY	LOG		OPTIONS-000005
+000006.sst	CURRENT		LOCK		MANIFEST-000007
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ less LOG
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ ls
+000003.log	000008.sst	CURRENT		LOCK		MANIFEST-000007
+000006.sst	000009.sst	IDENTITY	LOG		OPTIONS-000005
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ pwd
+/tmp/kafka-streams-global-tables/global-tables-example/global/rocksdb/threat-store
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ ls
+000003.log	000008.sst	CURRENT		LOCK		MANIFEST-000007
+000006.sst	000009.sst	IDENTITY	LOG		OPTIONS-000005
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ less LOG
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ less 000003.log 
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ ls
+threat-store	threat-store-2
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ ps -ef |java
+Error occurred during initialization of VM
+java.lang.Error: Properties init: Could not determine current working directory.
+	at java.lang.System.initProperties(Native Method)
+	at java.lang.System.initializeSystemClass(System.java:1166)
+
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ ps -ef | grep java
+  501 58064     1   0 Mon12PM ttys003    0:59.21 /usr/bin/java -Xmx512M -Xms512M -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dkafka.logs.dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/zookeeper/logs -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/kafka/log4j.properties -cp /Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/kafka/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-metadata-service/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/libs/*:/usr/share/java/support-metrics-client/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/libs/*:/usr/share/java/support-metrics-fullcollector/* org.apache.zookeeper.server.quorum.QuorumPeerMain /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/zookeeper/zookeeper.properties
+  501 58158     1   0 Mon12PM ttys003   21:26.56 /usr/bin/java -Xmx1G -Xms1G -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dkafka.logs.dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/kafka/logs -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/kafka/log4j.properties -cp /Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/kafka/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-metadata-service/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/libs/*:/usr/share/java/support-metrics-client/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/libs/*:/usr/share/java/support-metrics-fullcollector/* io.confluent.support.metrics.SupportedKafka /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/kafka/kafka.properties
+  501 58294     1   0 Mon12PM ttys003    1:42.62 /usr/bin/java -Xmx512M -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dschema-registry.log.dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/schema-registry/logs -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/schema-registry/log4j.properties -cp :/Users/matthew.mangia/confluent-5.3.0/bin/../package-schema-registry/target/kafka-schema-registry-package-*-development/share/java/schema-registry/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-security/schema-registry/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/schema-registry/* io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/schema-registry/schema-registry.properties
+  501 58447     1   0 Mon12PM ttys003    0:53.62 /usr/bin/java -Xmx256M -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dkafka-rest.log.dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/kafka-rest/logs -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/kafka-rest/log4j.properties -cp :/Users/matthew.mangia/confluent-5.3.0/bin/../kafka-rest/target/kafka-rest-*-development/share/java/kafka-rest/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-security/kafka-rest/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/kafka-rest/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/monitoring-interceptors/* io.confluent.kafkarest.KafkaRestMain /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/kafka-rest/kafka-rest.properties
+  501 58548     1   0 Mon12PM ttys003    5:15.10 /usr/bin/java -Xms256M -Xmx2G -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dkafka.logs.dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/connect/logs -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/kafka/connect-log4j.properties -cp /Users/matthew.mangia/confluent-5.3.0/share/java/confluent-security/connect/*:/Users/matthew.mangia/confluent-5.3.0/share/java/kafka/*:/Users/matthew.mangia/confluent-5.3.0/share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/share/java/kafka-serde-tools/*:/Users/matthew.mangia/confluent-5.3.0/share/java/monitoring-interceptors/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/kafka/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-metadata-service/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/libs/*:/usr/share/java/support-metrics-client/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/libs/*:/usr/share/java/support-metrics-fullcollector/* org.apache.kafka.connect.cli.ConnectDistributed /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/connect/connect.properties
+  501 58774     1   0 Mon12PM ttys003    1:50.63 /usr/bin/java -cp /Users/matthew.mangia/confluent-5.3.0/share/java/confluent-security/ksql/*:/Users/matthew.mangia/confluent-5.3.0/share/java/monitoring-interceptors/*:/Users/matthew.mangia/confluent-5.3.0/share/java/ksql/*:/Users/matthew.mangia/confluent-5.3.0/share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/share/java/confluent-common/*: -Xmx3g -server -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+ExplicitGCInvokesConcurrent -XX:NewRatio=1 -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dksql.log.dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/ksql-server/logs -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/etc/ksql/log4j.properties -Dksql.server.install.dir=/Users/matthew.mangia/confluent-5.3.0 -Xloggc:/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/ksql-server/logs/ksql-server-gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M io.confluent.ksql.rest.server.KsqlServerMain /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/ksql-server/ksql-server.properties
+  501 58854     1   0 Mon12PM ttys003  276:24.74 /usr/bin/java -cp /Users/matthew.mangia/confluent-5.3.0/share/java/acl/*:/Users/matthew.mangia/confluent-5.3.0/share/java/confluent-control-center/*:/Users/matthew.mangia/confluent-5.3.0/share/java/monitoring-interceptors/*:/Users/matthew.mangia/confluent-5.3.0/share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/share/java/confluent-common/*: -Xmx6g -server -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dconfluent.controlcenter.log.dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/control-center/logs -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/etc/confluent-control-center/log4j.properties io.confluent.controlcenter.ControlCenter /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy/control-center/control-center.properties
+  501 64040 49866   0 11:19AM ttys003    0:09.44 /usr/bin/java -Xmx512M -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dkafka.logs.dir=/var/log/kafka -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/kafka/tools-log4j.properties -cp /Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/kafka/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-metadata-service/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/libs/*:/usr/share/java/support-metrics-client/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/libs/*:/usr/share/java/support-metrics-fullcollector/* kafka.tools.ConsoleProducer --broker-list localhost:9092 --topic ioc-topic
+  501 64994 57489   0  1:21PM ttys004    0:02.33 /usr/bin/java -jar /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+  501 65009 59222   0  1:21PM ttys005    0:02.18 /usr/bin/java -jar target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+  501 63148 60513   0  8:38AM ttys006    1:24.28 /usr/bin/java -jar target/streams-query-statestore-demo-matt-1.0-jar-with-dependencies.jar
+  501 64027 59236   0 11:19AM ttys007    0:09.35 /usr/bin/java -Xmx512M -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dkafka.logs.dir=/var/log/kafka -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/kafka/tools-log4j.properties -cp /Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/kafka/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-metadata-service/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/libs/*:/usr/share/java/support-metrics-client/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/libs/*:/usr/share/java/support-metrics-fullcollector/* kafka.tools.ConsoleProducer --broker-list localhost:9092 --topic proc-start-topic
+  501 64058 60131   0 11:20AM ttys008    0:25.94 /usr/bin/java -Xmx512M -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dkafka.logs.dir=/var/log/kafka -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/kafka/tools-log4j.properties -cp /Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/kafka/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-metadata-service/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/libs/*:/usr/share/java/support-metrics-client/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/libs/*:/usr/share/java/support-metrics-fullcollector/* kafka.tools.ConsoleConsumer --bootstrap-server localhost:9092 --topic ktable-joined-topic
+  501 65013 60252   0  1:22PM ttys009    0:00.00 grep java
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ pwd
+/tmp/kafka-streams-global-tables/global-tables-example/global/rocksdb
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ ls
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ cd ..
+cd: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Matthew-Mangias-MBP15:.. matthew.mangia$ ls
+Matthew-Mangias-MBP15:.. matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:kafka-streams-global-tables matthew.mangia$ ls
+global-tables-example
+Matthew-Mangias-MBP15:kafka-streams-global-tables matthew.mangia$ cd global-tables-example/
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ls
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ll
+-bash: ll: command not found
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ls -la
+total 0
+drwxr-xr-x  2 matthew.mangia  wheel  64 Jul 30 14:08 .
+drwxr-xr-x  3 matthew.mangia  wheel  96 Jul 29 15:03 ..
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ls
+0_0	global
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ ls -la
+total 0
+drwxr-xr-x  4 matthew.mangia  wheel  128 Jul 30 14:09 .
+drwxr-xr-x  3 matthew.mangia  wheel   96 Jul 29 15:03 ..
+drwxr-xr-x  2 matthew.mangia  wheel   64 Jul 30 14:09 0_0
+drwxr-xr-x  4 matthew.mangia  wheel  128 Jul 30 14:09 global
+Matthew-Mangias-MBP15:global-tables-example matthew.mangia$ cd global/
+Matthew-Mangias-MBP15:global matthew.mangia$ ls
+rocksdb
+Matthew-Mangias-MBP15:global matthew.mangia$ cd rocksdb/
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ ls
+threat-store	threat-store-2
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ cd threat-store
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ ls
+000003.log	CURRENT		IDENTITY	LOCK		LOG		MANIFEST-000001	OPTIONS-000005
+Matthew-Mangias-MBP15:threat-store matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ pwd
+/private/tmp/kafka-streams-global-tables/global-tables-example/global/rocksdb
+Matthew-Mangias-MBP15:rocksdb matthew.mangia$ 

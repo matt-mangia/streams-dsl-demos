@@ -1,0 +1,67 @@
+Last login: Mon Jul 29 13:35:24 on ttys005
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic ioc-topic-keyed --from-beginning
+[2019-07-29 13:36:54,522] WARN [Consumer clientId=consumer-1, groupId=console-consumer-26507] Error while fetching metadata with correlation id 2 : {ioc-topic-keyed=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+^[[A^[[B^CProcessed a total of 0 messages
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic ioc-topic-keyed --from-beginning
+1, test
+2, test
+3, test
+3, test
+2, testing message
+^CProcessed a total of 4 messages
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-producer --broker-list localhost:9092 --topic proc-start-topic
+>2, leftside
+>test, 2
+>test,2
+>2, test
+>2
+>2, newTest
+>3, todaystest
+>5, hopefullythisworks
+>^CMatthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ clear
+
+
+
+
+
+
+
+
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-producer --broker-list localhost:9092 --topic proc-start-topic
+>10, testmessages
+>11, these
+>12, are
+>15, messages
+>14, notmatches
+>10, something
+>13, should see match
+>14, should not show up
+>10, newten
+>20, two entries
+>21, whyno2entries
+>21, shouldwork
+>21, nowtest
+>23, tests
+>21, shouldbedouble
+>23, two?
+>20, why no :
+>21, should have :
+>21, still work?
+>21, should have two
+>^CMatthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+
+
+
+
+
+
+
+

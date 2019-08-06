@@ -1,0 +1,1963 @@
+Last login: Tue Jul 23 20:19:23 on ttys003
+Matthew-Mangias-MBP15:bin matthew.mangia$ ls
+confluent				kafka-consumer-groups			kafka-verifiable-producer
+confluent-hub				kafka-consumer-perf-test		ksql
+confluent-rebalancer			kafka-delegation-tokens			ksql-datagen
+connect-distributed			kafka-delete-records			ksql-print-metrics
+connect-standalone			kafka-dump-log				ksql-run-class
+connect.stdout				kafka-log-dirs				ksql-server-start
+control-center-3_0_0-reset		kafka-mirror-maker			ksql-server-stop
+control-center-3_0_1-reset		kafka-mqtt-run-class			ksql-stop
+control-center-console-consumer		kafka-mqtt-start			ksql-test-runner
+control-center-export			kafka-mqtt-stop				replicator
+control-center-reset			kafka-preferred-replica-election	schema-registry-run-class
+control-center-run-class		kafka-producer-perf-test		schema-registry-start
+control-center-set-acls			kafka-reassign-partitions		schema-registry-stop
+control-center-start			kafka-replica-verification		schema-registry-stop-service
+control-center-stop			kafka-rest-run-class			security-plugins-run-class
+decrypted.txt				kafka-rest-start			sr-acl-cli
+kafka-acls				kafka-rest-stop				stub-api-run-class
+kafka-api-start				kafka-rest-stop-service			stub-api-start
+kafka-avro-console-consumer		kafka-run-class				support-metrics-bundle
+kafka-avro-console-producer		kafka-server-start			windows
+kafka-broker-api-versions		kafka-server-stop			zookeeper-security-migration
+kafka-configs				kafka-streams-application-reset		zookeeper-server-start
+kafka-console-consumer			kafka-topics				zookeeper-server-stop
+kafka-console-producer			kafka-verifiable-consumer		zookeeper-shell
+Matthew-Mangias-MBP15:bin matthew.mangia$ cd
+Matthew-Mangias-MBP15:~ matthew.mangia$ ls
+Applications					SoapUI-Tutorials				ksql-udf-demo
+Desktop						VirtualBox VMs					ksql-udf-demo-matt
+Documents					benchmarking.sh					ldap-plugins-5.1.2.jar
+Downloads					confluent-5.1.2					oa.py
+GBM_model_python_1561523164415_6.java		confluent-5.1.2-2.11.tar.gz			rpm
+GBM_model_python_1561523164415_6_MATT.java	confluent-5.3.0					rpms5.2.2
+IdeaProjects					confluent-5.3.0-2.12.tar.gz			rpms5.3.0
+Library						confluent-rpms-5.3.0.tar.gz			setuptools-33.1.1.zip
+MUFG						default-soapui-workspace.xml			soapui-settings.xml
+Movies						flask-aws-cp					streams-dsl-demo
+Music						flask-aws-onelogin-local			streams-dsl-demo.zip
+Pictures					flask-aws-onelogin-nginx			test.data
+Projects					flask-demo					test.jar
+Public						import h2o
+Matthew-Mangias-MBP15:~ matthew.mangia$ ls
+Applications					SoapUI-Tutorials				ksql-udf-demo
+Desktop						VirtualBox VMs					ksql-udf-demo-matt
+Documents					benchmarking.sh					ldap-plugins-5.1.2.jar
+Downloads					confluent-5.1.2					oa.py
+GBM_model_python_1561523164415_6.java		confluent-5.1.2-2.11.tar.gz			rpm
+GBM_model_python_1561523164415_6_MATT.java	confluent-5.3.0					rpms5.2.2
+IdeaProjects					confluent-5.3.0-2.12.tar.gz			rpms5.3.0
+Library						confluent-rpms-5.3.0.tar.gz			setuptools-33.1.1.zip
+MUFG						default-soapui-workspace.xml			soapui-settings.xml
+Movies						flask-aws-cp					streams-dsl-demo
+Music						flask-aws-onelogin-local			streams-dsl-demo.zip
+Pictures					flask-aws-onelogin-nginx			test.data
+Projects					flask-demo					test.jar
+Public						import h2o
+Matthew-Mangias-MBP15:~ matthew.mangia$ mkdir streams-global-ktable-demo
+Matthew-Mangias-MBP15:~ matthew.mangia$ ls
+Applications					SoapUI-Tutorials				ksql-udf-demo
+Desktop						VirtualBox VMs					ksql-udf-demo-matt
+Documents					benchmarking.sh					ldap-plugins-5.1.2.jar
+Downloads					confluent-5.1.2					oa.py
+GBM_model_python_1561523164415_6.java		confluent-5.1.2-2.11.tar.gz			rpm
+GBM_model_python_1561523164415_6_MATT.java	confluent-5.3.0					rpms5.2.2
+IdeaProjects					confluent-5.3.0-2.12.tar.gz			rpms5.3.0
+Library						confluent-rpms-5.3.0.tar.gz			setuptools-33.1.1.zip
+MUFG						default-soapui-workspace.xml			soapui-settings.xml
+Movies						flask-aws-cp					streams-dsl-demo
+Music						flask-aws-onelogin-local			streams-dsl-demo.zip
+Pictures					flask-aws-onelogin-nginx			streams-global-ktable-demo
+Projects					flask-demo					test.data
+Public						import h2o					test.jar
+Matthew-Mangias-MBP15:~ matthew.mangia$ rm streams-global-ktable-demo/
+rm: streams-global-ktable-demo/: is a directory
+Matthew-Mangias-MBP15:~ matthew.mangia$ rm -r streams-global-ktable-demo/
+Matthew-Mangias-MBP15:~ matthew.mangia$ ls
+Applications					SoapUI-Tutorials				ksql-udf-demo
+Desktop						VirtualBox VMs					ksql-udf-demo-matt
+Documents					benchmarking.sh					ldap-plugins-5.1.2.jar
+Downloads					confluent-5.1.2					oa.py
+GBM_model_python_1561523164415_6.java		confluent-5.1.2-2.11.tar.gz			rpm
+GBM_model_python_1561523164415_6_MATT.java	confluent-5.3.0					rpms5.2.2
+IdeaProjects					confluent-5.3.0-2.12.tar.gz			rpms5.3.0
+Library						confluent-rpms-5.3.0.tar.gz			setuptools-33.1.1.zip
+MUFG						default-soapui-workspace.xml			soapui-settings.xml
+Movies						flask-aws-cp					streams-dsl-demo
+Music						flask-aws-onelogin-local			streams-dsl-demo.zip
+Pictures					flask-aws-onelogin-nginx			test.data
+Projects					flask-demo					test.jar
+Public						import h2o
+Matthew-Mangias-MBP15:~ matthew.mangia$ cd streams-dsl-demo
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ ls
+Terminal Saved Output 1	Terminal Saved Output 3	input.txt		input3.txt		json-dsl-demo
+Terminal Saved Output 2	Terminal Saved Output 4	input2.txt		join-sample
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ ls
+Terminal Saved Output 1	Terminal Saved Output 4	input3.txt
+Terminal Saved Output 2	input.txt		join-sample
+Terminal Saved Output 3	input2.txt		json-dsl-demo
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ clear
+
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ ls
+Terminal Saved Output 1	Terminal Saved Output 4	input3.txt
+Terminal Saved Output 2	input.txt		join-sample
+Terminal Saved Output 3	input2.txt		json-dsl-demo
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ rm Terminal\ Saved\ Output\ *
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ ls
+input.txt	input2.txt	input3.txt	join-sample	json-dsl-demo
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ ls
+input.txt	input3.txt	json-dsl-demo
+input2.txt	join-sample
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ mkdir str-gkt-join
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ ls
+input.txt	input3.txt	json-dsl-demo
+input2.txt	join-sample	str-gkt-join
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd str-gkt-join/
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ ls
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ vi pom.xml
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ ls
+pom.xml
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mkdir src
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ cd src/
+Matthew-Mangias-MBP15:src matthew.mangia$ ls
+Matthew-Mangias-MBP15:src matthew.mangia$ mkdir main
+Matthew-Mangias-MBP15:src matthew.mangia$ cd main/
+Matthew-Mangias-MBP15:main matthew.mangia$ mkdir java
+Matthew-Mangias-MBP15:main matthew.mangia$ mkdir java/streams
+Matthew-Mangias-MBP15:main matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:src matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ ls
+pom.xml	src
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ cat pom.xml 
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Specify the package details for the dsl -->
+    <groupId>streams.strGktJoin</groupId>
+    <artifactId>streams-globalkt-join-demo-matt</artifactId>
+    <version>1.0</version>
+
+    <!-- Specify the repository for Confluent dependencies -->
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <url>http://packages.confluent.io/maven/</url>
+        </repository>
+    </repositories>
+
+    <properties>
+	<exec.mainClass>streams.strGktJoin</exec.mainClass>
+        <java.version>1.8</java.version>
+        <kafka.version>2.3.0</kafka.version>
+        <kafka.scala.version>2.12</kafka.scala.version>
+        <scala.version>${kafka.scala.version}.8</scala.version>
+        <confluent.version>5.3.0</confluent.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+	<dependency>
+	  <groupId>org.apache.kafka</groupId>
+	  <artifactId>kafka-streams-scala_2.12</artifactId>
+	  <version>2.1.0</version>
+	</dependency>
+    </dependencies>
+
+    <!-- Build boilerplate -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <!-- Package all dependencies as one jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.2</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>${exec.mainClass}</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>assemble-all</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ vi src/main/java/streams/strGktJoin.java
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd str-gkt-join/
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[87,64] ')' expected
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.150 s
+[INFO] Finished at: 2019-07-29T11:21:53-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[87,64] ')' expected
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ vi src/main/java/streams/strGktJoin.java
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[19,42] package io.confluent.examples.streams.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[20,42] package io.confluent.examples.streams.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[21,42] package io.confluent.examples.streams.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[22,42] package io.confluent.examples.streams.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[23,38] package io.confluent.kafka.serializers does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[24,46] package io.confluent.kafka.streams.serdes.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[47,23] cannot find symbol
+  symbol:   variable bootstrapServers
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[47,41] cannot find symbol
+  symbol:   variable schemaRegistryUrl
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,11] cannot find symbol
+  symbol:   class Serde
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[84,104] cannot find symbol
+  symbol:   variable threat
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[84,111] cannot find symbol
+  symbol:   variable store
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[89,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+      (cannot infer type-variable(s) GK,GV,RV
+        (actual and formal argument lists differ in length))
+[INFO] 12 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.332 s
+[INFO] Finished at: 2019-07-29T11:23:07-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure: Compilation failure: 
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[19,42] package io.confluent.examples.streams.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[20,42] package io.confluent.examples.streams.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[21,42] package io.confluent.examples.streams.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[22,42] package io.confluent.examples.streams.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[23,38] package io.confluent.kafka.serializers does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[24,46] package io.confluent.kafka.streams.serdes.avro does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[47,23] cannot find symbol
+[ERROR]   symbol:   variable bootstrapServers
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[47,41] cannot find symbol
+[ERROR]   symbol:   variable schemaRegistryUrl
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,11] cannot find symbol
+[ERROR]   symbol:   class Serde
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[84,104] cannot find symbol
+[ERROR]   symbol:   variable threat
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[84,111] cannot find symbol
+[ERROR]   symbol:   variable store
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[89,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+[ERROR]       (cannot infer type-variable(s) GK,GV,RV
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ vi src/main/java/streams/strGktJoin.java
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[41,23] cannot find symbol
+  symbol:   variable bootstrapServers
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[41,41] cannot find symbol
+  symbol:   variable schemaRegistryUrl
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[71,11] cannot find symbol
+  symbol:   class Serde
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[78,104] cannot find symbol
+  symbol:   variable threat
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[78,111] cannot find symbol
+  symbol:   variable store
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[83,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+      (cannot infer type-variable(s) GK,GV,RV
+        (actual and formal argument lists differ in length))
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.018 s
+[INFO] Finished at: 2019-07-29T11:23:38-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure: Compilation failure: 
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[41,23] cannot find symbol
+[ERROR]   symbol:   variable bootstrapServers
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[41,41] cannot find symbol
+[ERROR]   symbol:   variable schemaRegistryUrl
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[71,11] cannot find symbol
+[ERROR]   symbol:   class Serde
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[78,104] cannot find symbol
+[ERROR]   symbol:   variable threat
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[78,111] cannot find symbol
+[ERROR]   symbol:   variable store
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[83,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+[ERROR]       (cannot infer type-variable(s) GK,GV,RV
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ vi src/main/java/streams/strGktJoin.java
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[41,23] cannot find symbol
+  symbol:   variable bootstrapServers
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[41,41] cannot find symbol
+  symbol:   variable schemaRegistryUrl
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[70,11] cannot find symbol
+  symbol:   class Serde
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,104] cannot find symbol
+  symbol:   variable threat
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,111] cannot find symbol
+  symbol:   variable store
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[82,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+      (cannot infer type-variable(s) GK,GV,RV
+        (actual and formal argument lists differ in length))
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.053 s
+[INFO] Finished at: 2019-07-29T11:25:22-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure: Compilation failure: 
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[41,23] cannot find symbol
+[ERROR]   symbol:   variable bootstrapServers
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[41,41] cannot find symbol
+[ERROR]   symbol:   variable schemaRegistryUrl
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[70,11] cannot find symbol
+[ERROR]   symbol:   class Serde
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,104] cannot find symbol
+[ERROR]   symbol:   variable threat
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,111] cannot find symbol
+[ERROR]   symbol:   variable store
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[82,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+[ERROR]       (cannot infer type-variable(s) GK,GV,RV
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ vi src/main/java/streams/strGktJoin.java
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[70,11] cannot find symbol
+  symbol:   class Serde
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,104] cannot find symbol
+  symbol:   variable threat
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,111] cannot find symbol
+  symbol:   variable store
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[82,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+      (cannot infer type-variable(s) GK,GV,RV
+        (actual and formal argument lists differ in length))
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.067 s
+[INFO] Finished at: 2019-07-29T11:26:05-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure: Compilation failure: 
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[70,11] cannot find symbol
+[ERROR]   symbol:   class Serde
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,104] cannot find symbol
+[ERROR]   symbol:   variable threat
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[77,111] cannot find symbol
+[ERROR]   symbol:   variable store
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[82,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+[ERROR]       (cannot infer type-variable(s) GK,GV,RV
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ vi src/main/java/streams/strGktJoin.java
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[70,11] cannot find symbol
+  symbol:   class Serde
+  location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[82,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+      (cannot infer type-variable(s) GK,GV,RV
+        (actual and formal argument lists differ in length))
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.032 s
+[INFO] Finished at: 2019-07-29T11:32:55-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure: Compilation failure: 
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[70,11] cannot find symbol
+[ERROR]   symbol:   class Serde
+[ERROR]   location: class io.confluent.examples.streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[82,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+[ERROR]       (cannot infer type-variable(s) GK,GV,RV
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[82,18] cannot find symbol
+  symbol:   method selectKey((key,value[...]")[0])
+  location: class org.apache.kafka.streams.kstream.Materialized<java.lang.String,java.lang.String,org.apache.kafka.streams.state.KeyValueStore<org.apache.kafka.common.utils.Bytes,byte[]>>
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[84,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+      (cannot infer type-variable(s) GK,GV,RV
+        (actual and formal argument lists differ in length))
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.388 s
+[INFO] Finished at: 2019-07-29T12:38:45-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure: Compilation failure: 
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[82,18] cannot find symbol
+[ERROR]   symbol:   method selectKey((key,value[...]")[0])
+[ERROR]   location: class org.apache.kafka.streams.kstream.Materialized<java.lang.String,java.lang.String,org.apache.kafka.streams.state.KeyValueStore<org.apache.kafka.common.utils.Bytes,byte[]>>
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[84,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+[ERROR]       (cannot infer type-variable(s) GK,GV,RV
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[85,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+      (cannot infer type-variable(s) VO,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+    method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+      (cannot infer type-variable(s) VT,VR
+        (actual and formal argument lists differ in length))
+    method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+      (cannot infer type-variable(s) GK,GV,RV
+        (actual and formal argument lists differ in length))
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.048 s
+[INFO] Finished at: 2019-07-29T12:39:42-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[85,60] no suitable method found for join(org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String>,(leftValue[...]Value)
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VO,VR>join(org.apache.kafka.streams.kstream.KStream<java.lang.String,VO>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VO,? extends VR>,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VO>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VO,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (argument mismatch; org.apache.kafka.streams.kstream.GlobalKTable<java.lang.String,java.lang.String> cannot be converted to org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<VT,VR>join(org.apache.kafka.streams.kstream.KTable<java.lang.String,VT>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super VT,? extends VR>,org.apache.kafka.streams.kstream.Joined<java.lang.String,java.lang.String,VT>) is not applicable
+[ERROR]       (cannot infer type-variable(s) VT,VR
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR]     method org.apache.kafka.streams.kstream.KStream.<GK,GV,RV>join(org.apache.kafka.streams.kstream.GlobalKTable<GK,GV>,org.apache.kafka.streams.kstream.KeyValueMapper<? super java.lang.String,? super java.lang.String,? extends GK>,org.apache.kafka.streams.kstream.ValueJoiner<? super java.lang.String,? super GV,? extends RV>) is not applicable
+[ERROR]       (cannot infer type-variable(s) GK,GV,RV
+[ERROR]         (actual and formal argument lists differ in length))
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.466 s
+[INFO] Finished at: 2019-07-29T12:43:28-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ cd target/
+Matthew-Mangias-MBP15:target matthew.mangia$ ls
+archive-tmp
+classes
+generated-sources
+maven-archiver
+maven-status
+streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+streams-globalkt-join-demo-matt-1.0.jar
+Matthew-Mangias-MBP15:target matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[84,18] cannot find symbol
+  symbol:   method selectKey((key,value[...]")[0])
+  location: class org.apache.kafka.streams.kstream.Materialized<java.lang.String,java.lang.String,org.apache.kafka.streams.state.KeyValueStore<org.apache.kafka.common.utils.Bytes,byte[]>>
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.537 s
+[INFO] Finished at: 2019-07-29T13:25:00-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[84,18] cannot find symbol
+[ERROR]   symbol:   method selectKey((key,value[...]")[0])
+[ERROR]   location: class org.apache.kafka.streams.kstream.Materialized<java.lang.String,java.lang.String,org.apache.kafka.streams.state.KeyValueStore<org.apache.kafka.common.utils.Bytes,byte[]>>
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ ls
+input.txt	input2.txt	input3.txt	join-sample	json-dsl-demo	str-gkt-join
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd join-sample/
+pom.xml  src/     target/  
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd join-sample/
+pom.xml  src/     target/  
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd join-sample/
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ ls
+pom.xml	src	target
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ cd src/main/
+java/      resources/ 
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ cd src/main/
+java/      resources/ 
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ cd src/main/java/streams/
+Matthew-Mangias-MBP15:streams matthew.mangia$ vi JoinSample.java 
+Matthew-Mangias-MBP15:streams matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:java matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:main matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:src matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ ls
+pom.xml	src	target
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< streams.JoinSample:streams-dsl-demo-matt >--------------
+[INFO] Building streams-dsl-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-dsl-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/join-sample/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-dsl-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/join-sample/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/join-sample/src/main/java/streams/JoinSample.java:[70,13] illegal start of expression
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.291 s
+[INFO] Finished at: 2019-07-29T13:34:28-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-dsl-demo-matt: Compilation failure
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/join-sample/src/main/java/streams/JoinSample.java:[70,13] illegal start of expression
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ vi src/main/
+java/      resources/ 
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ vi src/main/
+java/      resources/ 
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ vi src/main/java/streams/JoinSample.java 
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< streams.JoinSample:streams-dsl-demo-matt >--------------
+[INFO] Building streams-dsl-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-dsl-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/join-sample/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-dsl-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/join-sample/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/join-sample/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-dsl-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-dsl-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/join-sample/target/streams-dsl-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/join-sample/target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.129 s
+[INFO] Finished at: 2019-07-29T13:35:18-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ vi src/main/java/streams/JoinSample.java 
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd 
+.idea/         input.txt      input2.txt     input3.txt     join-sample/   json-dsl-demo/ str-gkt-join/
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd str-gkt-join/
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ ls
+pom.xml	src	target
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.113 s
+[INFO] Finished at: 2019-07-29T13:39:18-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ cd target/
+Matthew-Mangias-MBP15:target matthew.mangia$ ls
+archive-tmp
+classes
+generated-sources
+maven-archiver
+maven-status
+streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+streams-globalkt-join-demo-matt-1.0.jar
+Matthew-Mangias-MBP15:target matthew.mangia$ java -jar streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+Error: Could not find or load main class streams.strGktJoin
+Matthew-Mangias-MBP15:target matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ vi pom.xml 
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.789 s
+[INFO] Finished at: 2019-07-29T13:40:52-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ cd target/
+Matthew-Mangias-MBP15:target matthew.mangia$ ls
+archive-tmp
+classes
+generated-sources
+maven-archiver
+maven-status
+streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+streams-globalkt-join-demo-matt-1.0.jar
+Matthew-Mangias-MBP15:target matthew.mangia$ java -jar streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar 
+Error: Could not find or load main class streams.main
+Matthew-Mangias-MBP15:target matthew.mangia$ vi pom.xml 
+Matthew-Mangias-MBP15:target matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ vi pom.xml 
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.153 s
+[INFO] Finished at: 2019-07-29T15:02:39-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ java -jar streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar 
+Error: Unable to access jarfile streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.133 s
+[INFO] Finished at: 2019-07-29T15:19:27-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.352 s
+[INFO] Finished at: 2019-07-29T15:27:22-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[24,33] package org.apache.kafka.streams1 does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[62,17] cannot find symbol
+  symbol:   class KafkaStreams
+  location: class streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[42,11] cannot find symbol
+  symbol:   class KafkaStreams
+  location: class streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[94,16] cannot find symbol
+  symbol:   class KafkaStreams
+  location: class streams.strGktJoin
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.469 s
+[INFO] Finished at: 2019-07-30T12:58:40-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure: Compilation failure: 
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[24,33] package org.apache.kafka.streams1 does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[62,17] cannot find symbol
+[ERROR]   symbol:   class KafkaStreams
+[ERROR]   location: class streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[42,11] cannot find symbol
+[ERROR]   symbol:   class KafkaStreams
+[ERROR]   location: class streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[94,16] cannot find symbol
+[ERROR]   symbol:   class KafkaStreams
+[ERROR]   location: class streams.strGktJoin
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[24,33] package org.apache.kafka.streams1 does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[62,17] cannot find symbol
+  symbol:   class KafkaStreams
+  location: class streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[42,11] cannot find symbol
+  symbol:   class KafkaStreams
+  location: class streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[94,16] cannot find symbol
+  symbol:   class KafkaStreams
+  location: class streams.strGktJoin
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.789 s
+[INFO] Finished at: 2019-07-30T12:59:50-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:compile (default-compile) on project streams-globalkt-join-demo-matt: Compilation failure: Compilation failure: 
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[24,33] package org.apache.kafka.streams1 does not exist
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[62,17] cannot find symbol
+[ERROR]   symbol:   class KafkaStreams
+[ERROR]   location: class streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[42,11] cannot find symbol
+[ERROR]   symbol:   class KafkaStreams
+[ERROR]   location: class streams.strGktJoin
+[ERROR] /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/java/streams/strGktJoin.java:[94,16] cannot find symbol
+[ERROR]   symbol:   class KafkaStreams
+[ERROR]   location: class streams.strGktJoin
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.980 s
+[INFO] Finished at: 2019-07-30T13:00:16-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-gkt-join matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd 
+.idea/                 input2.txt             join-sample/           queryable-state-store/ str-gkt-join/
+input.txt              input3.txt             json-dsl-demo/         str-2gkt-join/         topic-rekey/
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd str-2gkt-join/
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ ls
+pom.xml	src	target
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.604 s
+[INFO] Finished at: 2019-07-30T13:01:45-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar target/
+archive-tmp/
+classes/
+generated-sources/
+maven-archiver/
+maven-status/
+streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+streams-globalkt-join-demo-matt-1.0.jar
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.420 s
+[INFO] Finished at: 2019-07-30T13:08:26-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.518 s
+[INFO] Finished at: 2019-07-30T13:09:27-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.731 s
+[INFO] Finished at: 2019-07-30T13:12:27-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar target/
+archive-tmp/
+classes/
+generated-sources/
+maven-archiver/
+maven-status/
+streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+streams-globalkt-join-demo-matt-1.0.jar
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.497 s
+[INFO] Finished at: 2019-07-30T13:15:49-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangiapwd
+/Users/matthew.mangia/streams-dsl-demo/str-2gkt-join
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ vi 
+pom.xml  src/     target/  
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ vi src/main/java/streams/strGktJoin.java 
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.050 s
+[INFO] Finished at: 2019-07-30T13:19:12-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/tget/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+^[[A^[[A^[[[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.976 s
+[INFO] Finished at: 2019-07-30T13:21:02-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/tget/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.298 s
+[INFO] Finished at: 2019-07-30T13:25:11-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangiamvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.035 s
+[INFO] Finished at: 2019-07-30T14:08:04-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< streams.strGktJoin:streams-globalkt-join-demo-matt >---------
+[INFO] Building streams-globalkt-join-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-globalkt-join-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-globalkt-join-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-globalkt-join-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-globalkt-join-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-globalkt-join-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-globalkt-join-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.549 s
+[INFO] Finished at: 2019-07-30T14:09:09-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ java -jar /Users/matthew.mangia/streams-dsl-demo/str-2gkt-join/target/streams-globalkt-join-demo-matt-1.0-jar-with-dependencies.jar
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^CMatthew-Mangias-MBP15:str-2gkt-join matthew.mangia$ 

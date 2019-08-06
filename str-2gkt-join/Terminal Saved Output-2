@@ -1,0 +1,1087 @@
+Last login: Mon Jul 22 10:47:43 on ttys007
+Matthew-Mangias-MBP15:bin matthew.mangia$ ifconfig | grep inet
+	inet 127.0.0.1 netmask 0xff000000 
+	inet6 ::1 prefixlen 128 
+	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1 
+	inet6 fe80::aede:48ff:fe00:1122%en5 prefixlen 64 scopeid 0x8 
+	inet6 fe80::cc:a137:d07e:2edb%en0 prefixlen 64 secured scopeid 0xa 
+	inet 192.168.1.10 netmask 0xffffff00 broadcast 192.168.1.255
+	inet6 fe80::f0c7:30ff:fec9:308%awdl0 prefixlen 64 scopeid 0xc 
+	inet6 fe80::17ac:64cb:d90c:1949%utun0 prefixlen 64 scopeid 0x12 
+	inet 192.168.33.1 netmask 0xffffff00 broadcast 192.168.33.255
+Matthew-Mangias-MBP15:bin matthew.mangia$ curl whatismyip.org
+Matthew-Mangias-MBP15:bin matthew.mangia$ klist 
+klist: krb5_cc_get_principal: No credentials cache file found
+Matthew-Mangias-MBP15:bin matthew.mangia$ klist ~/Downloads/
+Display all 194 possibilities? (y or n)
+.DS_Store
+.localized
+1343006_E_20170224.pdf
+20181128 OpenAir Task Definitions Task Definitions - PS.pdf
+2018_Kafka_Environments (1).pdf
+2019-03-08-Nationwide.adoc
+2019-03-26-United (1).pdf
+2019-03-26-United.pdf
+2019-04-02-Nationwide-US (1).pdf
+2019-04-02-Nationwide-US.pdf
+2019-04-30-BC-Ferries.pdf
+2019-05-28-Omnicell.pdf
+2019-06-03-MUFG-Union-Bank.pdf
+2019-06-04-AC-Project.pdf
+2019-06-11-Lowe.s.pdf
+2019-06-11-Lowes.pdf
+2019-06-18-Hallmark-Labs.pdf
+2019-06-18-Inditex.pdf
+2019-06-24-Allstatehealthcheck (1).pdf
+2019-06-24-Allstatehealthcheck (2).pdf
+2019-06-24-Allstatehealthcheck (3).pdf
+2019-06-24-Allstatehealthcheck (4).pdf
+2019-06-24-Allstatehealthcheck (5).pdf
+2019-06-24-Allstatehealthcheck.pdf
+2019-06-24-Intel.pdf
+2019-06-24-Itau.pdf
+2019-06-25-Bayer.pdf
+2019-07-15-Google.pdf
+2520e4f9-595a-4176-b3f3-b7e05b64395d.pdf
+4bf0ed76-204b-4c0d-9181-10881a8c30f3.pdf
+Matthew-Mangias-MBP15:bin matthew.mangia$ klist ~/Downloads/bkr1.keytab 
+Arguments given (1) are more than expected (0).
+
+Usage: klist [-ftsT5Alvanh] [--cache=string] [-c string] [--test] [--tokens] [--v5] [--all-content] [--list-all] [--verbose] [--json] [--hidden]
+   [--version] [--help] 
+-c string, --cache=string credential cache to list
+-f                        list flags
+-t, --test                test for having tickets
+-T, --tokens              display AFS tokens
+-5, --v5                  display v5 credential tokens
+-A, --all-content         List all caches with their content
+-l, --list-all            List all caches
+-v, --verbose             Verbose output
+--json                    JSON formated output
+--hidden                  Verbose output
+Matthew-Mangias-MBP15:bin matthew.mangia$ klist -kt ~/Downloads/bkr1.keytab 
+Usage: klist [-ftsT5Alvanh] [--cache=string] [-c string] [--test] [--tokens] [--v5] [--all-content] [--list-all] [--verbose] [--json] [--hidden]
+   [--version] [--help] 
+-c string, --cache=string credential cache to list
+-f                        list flags
+-t, --test                test for having tickets
+-T, --tokens              display AFS tokens
+-5, --v5                  display v5 credential tokens
+-A, --all-content         List all caches with their content
+-l, --list-all            List all caches
+-v, --verbose             Verbose output
+--json                    JSON formated output
+--hidden                  Verbose output
+Matthew-Mangias-MBP15:bin matthew.mangia$ klist --list-all ~/Downloads/bkr1.keytab 
+Arguments given (1) are more than expected (0).
+
+Usage: klist [-ftsT5Alvanh] [--cache=string] [-c string] [--test] [--tokens] [--v5] [--all-content] [--list-all] [--verbose] [--json] [--hidden]
+   [--version] [--help] 
+-c string, --cache=string credential cache to list
+-f                        list flags
+-t, --test                test for having tickets
+-T, --tokens              display AFS tokens
+-5, --v5                  display v5 credential tokens
+-A, --all-content         List all caches with their content
+-l, --list-all            List all caches
+-v, --verbose             Verbose output
+--json                    JSON formated output
+--hidden                  Verbose output
+Matthew-Mangias-MBP15:bin matthew.mangia$ ktutil
+Usage: ktutil [-hv] [--version] [--help] [--keytab=keytab to operate on] [-k keytab to operate on] [--verbose] command
+-k keytab to operate on, --keytab=keytab to operate on keytab
+-v, --verbose                                          verbose
+Matthew-Mangias-MBP15:bin matthew.mangia$ ktutil --keytab=~/Downloads/bkr1.keytab 
+Usage: ktutil [-hv] [--version] [--help] [--keytab=keytab to operate on] [-k keytab to operate on] [--verbose] command
+-k keytab to operate on, --keytab=keytab to operate on keytab
+-v, --verbose                                          verbose
+Matthew-Mangias-MBP15:bin matthew.mangia$ ktutil --keytab=~/Downloads/bkr1.keytab list
+ktutil: krb5_kt_start_seq_get ~/Downloads/bkr1.keytab: keytab ~/Downloads/bkr1.keytab access failed: No such file or directory
+Matthew-Mangias-MBP15:bin matthew.mangia$ ktutil -k ~/Downloads/bkr1.keytab list
+/Users/matthew.mangia/Downloads/bkr1.keytab:
+
+Vno  Type                     Principal                                            Aliases
+  3  des-cbc-crc-deprecated   kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+  3  des-cbc-md5-deprecated   kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+  3  arcfour-hmac-md5         kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+  3  aes256-cts-hmac-sha1-96  kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+  3  aes128-cts-hmac-sha1-96  kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+Matthew-Mangias-MBP15:bin matthew.mangia$ ktutil -k ~/Downloads/bkr1.keytab list
+/Users/matthew.mangia/Downloads/bkr1.keytab:
+
+Vno  Type                     Principal                                            Aliases
+  7  des-cbc-crc-deprecated   kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+  7  des-cbc-md5-deprecated   kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+  7  arcfour-hmac-md5         kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+  7  aes256-cts-hmac-sha1-96  kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+  7  aes128-cts-hmac-sha1-96  kafka-bkr1/kafka1.fqdn@KERB.CONFLUENT.NERDYNICK.NET  
+Matthew-Mangias-MBP15:bin matthew.mangia$ ls
+confluent				kafka-consumer-groups			kafka-verifiable-producer
+confluent-hub				kafka-consumer-perf-test		ksql
+confluent-rebalancer			kafka-delegation-tokens			ksql-datagen
+connect-distributed			kafka-delete-records			ksql-print-metrics
+connect-standalone			kafka-dump-log				ksql-run-class
+connect.stdout				kafka-log-dirs				ksql-server-start
+control-center-3_0_0-reset		kafka-mirror-maker			ksql-server-stop
+control-center-3_0_1-reset		kafka-mqtt-run-class			ksql-stop
+control-center-console-consumer		kafka-mqtt-start			ksql-test-runner
+control-center-export			kafka-mqtt-stop				replicator
+control-center-reset			kafka-preferred-replica-election	schema-registry-run-class
+control-center-run-class		kafka-producer-perf-test		schema-registry-start
+control-center-set-acls			kafka-reassign-partitions		schema-registry-stop
+control-center-start			kafka-replica-verification		schema-registry-stop-service
+control-center-stop			kafka-rest-run-class			security-plugins-run-class
+decrypted.txt				kafka-rest-start			sr-acl-cli
+kafka-acls				kafka-rest-stop				stub-api-run-class
+kafka-api-start				kafka-rest-stop-service			stub-api-start
+kafka-avro-console-consumer		kafka-run-class				support-metrics-bundle
+kafka-avro-console-producer		kafka-server-start			windows
+kafka-broker-api-versions		kafka-server-stop			zookeeper-security-migration
+kafka-configs				kafka-streams-application-reset		zookeeper-server-start
+kafka-console-consumer			kafka-topics				zookeeper-server-stop
+kafka-console-producer			kafka-verifiable-consumer		zookeeper-shell
+Matthew-Mangias-MBP15:bin matthew.mangia$ cd ../etc/kafka-connect-
+-bash: cd: ../etc/kafka-connect-: No such file or directory
+Matthew-Mangias-MBP15:bin matthew.mangia$ cd ../etc/kafka-connect-
+kafka-connect-activemq/       kafka-connect-ibmmq/          kafka-connect-jms/            kafka-connect-s3/             
+kafka-connect-elasticsearch/  kafka-connect-jdbc/           kafka-connect-replicator/     kafka-connect-storage-common/ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ cd ../etc/kafka
+kafka/                        kafka-connect-elasticsearch/  kafka-connect-jdbc/           kafka-connect-replicator/     kafka-connect-storage-common/
+kafka-connect-activemq/       kafka-connect-ibmmq/          kafka-connect-jms/            kafka-connect-s3/             kafka-rest/
+Matthew-Mangias-MBP15:bin matthew.mangia$ cd ../etc/kafka/
+aegis-log4j.properties             connect-distributed.properties     connect-standalone.properties      server.properties
+aegis.properties                   connect-file-sink.properties       consumer.properties                tools-log4j.properties
+connect-console-sink.properties    connect-file-source.properties     log4j.properties                   trogdor.conf
+connect-console-source.properties  connect-log4j.properties           producer.properties                zookeeper.properties
+Matthew-Mangias-MBP15:bin matthew.mangia$ cd ../etc/kafka/
+Matthew-Mangias-MBP15:kafka matthew.mangia$ less connect-log4j.properties 
+Matthew-Mangias-MBP15:kafka matthew.mangia$ less log4j.properties 
+Matthew-Mangias-MBP15:kafka matthew.mangia$ less connect-log4j.properties 
+Matthew-Mangias-MBP15:kafka matthew.mangia$ less log4j.properties 
+Matthew-Mangias-MBP15:kafka matthew.mangia$ less connect-log4j.properties 
+^[OB^[OB^[OB^[OB^[OB^[OBMatthew-Mangias-MBP15:kafka matthew.mangia$ less connect-log4j.properties 
+Matthew-Mangias-MBP15:kafka matthew.mangia$ less log4j.properties 
+Matthew-Mangias-MBP15:kafka matthew.mangia$ less tools-log4j.properties 
+Matthew-Mangias-MBP15:kafka matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:etc matthew.mangia$ cd ../bin/
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-producer 
+This tool helps to read data from standard input and publish it to Kafka.
+Option                                   Description                            
+------                                   -----------                            
+--batch-size <Integer: size>             Number of messages to send in a single 
+                                           batch if they are not being sent     
+                                           synchronously. (default: 200)        
+--broker-list <String: broker-list>      REQUIRED: The broker list string in    
+                                           the form HOST1:PORT1,HOST2:PORT2.    
+--compression-codec [String:             The compression codec: either 'none',  
+  compression-codec]                       'gzip', 'snappy', 'lz4', or 'zstd'.  
+                                           If specified without value, then it  
+                                           defaults to 'gzip'                   
+--help                                   Print usage information.               
+--line-reader <String: reader_class>     The class name of the class to use for 
+                                           reading lines from standard in. By   
+                                           default each line is read as a       
+                                           separate message. (default: kafka.   
+                                           tools.                               
+                                           ConsoleProducer$LineMessageReader)   
+--max-block-ms <Long: max block on       The max time that the producer will    
+  send>                                    block for during a send request      
+                                           (default: 60000)                     
+--max-memory-bytes <Long: total memory   The total memory used by the producer  
+  in bytes>                                to buffer records waiting to be sent 
+                                           to the server. (default: 33554432)   
+--max-partition-memory-bytes <Long:      The buffer size allocated for a        
+  memory in bytes per partition>           partition. When records are received 
+                                           which are smaller than this size the 
+                                           producer will attempt to             
+                                           optimistically group them together   
+                                           until this size is reached.          
+                                           (default: 16384)                     
+--message-send-max-retries <Integer>     Brokers can fail receiving the message 
+                                           for multiple reasons, and being      
+                                           unavailable transiently is just one  
+                                           of them. This property specifies the 
+                                           number of retires before the         
+                                           producer give up and drop this       
+                                           message. (default: 3)                
+--metadata-expiry-ms <Long: metadata     The period of time in milliseconds     
+  expiration interval>                     after which we force a refresh of    
+                                           metadata even if we haven't seen any 
+                                           leadership changes. (default: 300000)
+--producer-property <String:             A mechanism to pass user-defined       
+  producer_prop>                           properties in the form key=value to  
+                                           the producer.                        
+--producer.config <String: config file>  Producer config properties file. Note  
+                                           that [producer-property] takes       
+                                           precedence over this config.         
+--property <String: prop>                A mechanism to pass user-defined       
+                                           properties in the form key=value to  
+                                           the message reader. This allows      
+                                           custom configuration for a user-     
+                                           defined message reader.              
+--request-required-acks <String:         The required acks of the producer      
+  request required acks>                   requests (default: 1)                
+--request-timeout-ms <Integer: request   The ack timeout of the producer        
+  timeout ms>                              requests. Value must be non-negative 
+                                           and non-zero (default: 1500)         
+--retry-backoff-ms <Integer>             Before each retry, the producer        
+                                           refreshes the metadata of relevant   
+                                           topics. Since leader election takes  
+                                           a bit of time, this property         
+                                           specifies the amount of time that    
+                                           the producer waits before refreshing 
+                                           the metadata. (default: 100)         
+--socket-buffer-size <Integer: size>     The size of the tcp RECV size.         
+                                           (default: 102400)                    
+--sync                                   If set message send requests to the    
+                                           brokers are synchronously, one at a  
+                                           time as they arrive.                 
+--timeout <Integer: timeout_ms>          If set and the producer is running in  
+                                           asynchronous mode, this gives the    
+                                           maximum amount of time a message     
+                                           will queue awaiting sufficient batch 
+                                           size. The value is given in ms.      
+                                           (default: 1000)                      
+--topic <String: topic>                  REQUIRED: The topic id to produce      
+                                           messages to.                         
+--version                                Display Kafka version.                 
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-acls
+This tool helps to manage acls on kafka.
+Option                                   Description                            
+------                                   -----------                            
+--add                                    Indicates you are trying to add ACLs.  
+--allow-host <String: allow-host>        Host from which principals listed in --
+                                           allow-principal will have access. If 
+                                           you have specified --allow-principal 
+                                           then the default for this option     
+                                           will be set to * which allows access 
+                                           from all hosts.                      
+--allow-principal <String: allow-        principal is in principalType:name     
+  principal>                               format. Note that principalType must 
+                                           be supported by the Authorizer being 
+                                           used. For example, User:* is the     
+                                           wild card indicating all users.      
+--authorizer <String: authorizer>        Fully qualified class name of the      
+                                           authorizer, defaults to kafka.       
+                                           security.auth.SimpleAclAuthorizer.   
+--authorizer-properties <String:         REQUIRED: properties required to       
+  authorizer-properties>                   configure an instance of Authorizer. 
+                                           These are key=val pairs. For the     
+                                           default authorizer the example       
+                                           values are: zookeeper.               
+                                           connect=localhost:2181               
+--bootstrap-server <String: server to    A list of host/port pairs to use for   
+  connect to>                              establishing the connection to the   
+                                           Kafka cluster. This list should be   
+                                           in the form host1:port1,host2:       
+                                           port2,... This config is required    
+                                           for acl management using admin       
+                                           client API.                          
+--cluster                                Add/Remove cluster ACLs.               
+--command-config [String: command-       A property file containing configs to  
+  config]                                  be passed to Admin Client.           
+--consumer                               Convenience option to add/remove ACLs  
+                                           for consumer role. This will         
+                                           generate ACLs that allows READ,      
+                                           DESCRIBE on topic and READ on group. 
+--delegation-token <String: delegation-  Delegation token to which ACLs should  
+  token>                                   be added or removed. A value of *    
+                                           indicates ACL should apply to all    
+                                           tokens.                              
+--deny-host <String: deny-host>          Host from which principals listed in --
+                                           deny-principal will be denied        
+                                           access. If you have specified --deny-
+                                           principal then the default for this  
+                                           option will be set to * which denies 
+                                           access from all hosts.               
+--deny-principal <String: deny-          principal is in principalType:name     
+  principal>                               format. By default anyone not added  
+                                           through --allow-principal is denied  
+                                           access. You only need to use this    
+                                           option as negation to already        
+                                           allowed set. Note that principalType 
+                                           must be supported by the Authorizer  
+                                           being used. For example if you       
+                                           wanted to allow access to all users  
+                                           in the system but not test-user you  
+                                           can define an ACL that allows access 
+                                           to User:* and specify --deny-        
+                                           principal=User:test@EXAMPLE.COM. AND 
+                                           PLEASE REMEMBER DENY RULES TAKES     
+                                           PRECEDENCE OVER ALLOW RULES.         
+--force                                  Assume Yes to all queries and do not   
+                                           prompt.                              
+--group <String: group>                  Consumer Group to which the ACLs       
+                                           should be added or removed. A value  
+                                           of * indicates the ACLs should apply 
+                                           to all groups.                       
+--help                                   Print usage information.               
+--idempotent                             Enable idempotence for the producer.   
+                                           This should be used in combination   
+                                           with the --producer option. Note     
+                                           that idempotence is enabled          
+                                           automatically if the producer is     
+                                           authorized to a particular           
+                                           transactional-id.                    
+--list                                   List ACLs for the specified resource,  
+                                           use --topic <topic> or --group       
+                                           <group> or --cluster to specify a    
+                                           resource.                            
+--operation <String>                     Operation that is being allowed or     
+                                           denied. Valid operation names are:   
+                                         	Read                                  
+                                         	Write                                 
+                                         	Create                                
+                                         	Delete                                
+                                         	Alter                                 
+                                         	Describe                              
+                                         	ClusterAction                         
+                                         	AlterConfigs                          
+                                         	DescribeConfigs                       
+                                         	IdempotentWrite                       
+                                         	All                                   
+                                          (default: All)                        
+--principal [String: principal]          List ACLs for the specified principal. 
+                                           principal is in principalType:name   
+                                           format. Note that principalType must 
+                                           be supported by the Authorizer being 
+                                           used. Multiple --principal option    
+                                           can be passed.                       
+--producer                               Convenience option to add/remove ACLs  
+                                           for producer role. This will         
+                                           generate ACLs that allows WRITE,     
+                                           DESCRIBE and CREATE on topic.        
+--remove                                 Indicates you are trying to remove     
+                                           ACLs.                                
+--resource-pattern-type                  The type of the resource pattern or    
+  <ANY|MATCH|LITERAL|PREFIXED|CONFLUENT_ALL_TENANT_LITERAL|CONFLUENT_ALL_TENANT_PREFIXED|CONFLUENT_ALL_TENANT_ANY|CONFLUENT_ONLY_TENANT_MATCH>    pattern filter. When adding acls,    
+                                           this should be a specific pattern    
+                                           type, e.g. 'literal' or 'prefixed'.  
+                                           When listing or removing acls, a     
+                                           specific pattern type can be used to 
+                                           list or remove acls from specific    
+                                           resource patterns, or use the filter 
+                                           values of 'any' or 'match', where    
+                                           'any' will match any pattern type,   
+                                           but will match the resource name     
+                                           exactly, where as 'match' will       
+                                           perform pattern matching to list or  
+                                           remove all acls that affect the      
+                                           supplied resource(s). WARNING:       
+                                           'match', when used in combination    
+                                           with the '--remove' switch, should   
+                                           be used with care. (default: LITERAL)
+--topic <String: topic>                  topic to which ACLs should be added or 
+                                           removed. A value of * indicates ACL  
+                                           should apply to all topics.          
+--transactional-id <String:              The transactionalId to which ACLs      
+  transactional-id>                        should be added or removed. A value  
+                                           of * indicates the ACLs should apply 
+                                           to all transactionalIds.             
+--version                                Display Kafka version.                 
+Matthew-Mangias-MBP15:bin matthew.mangia$ ls
+confluent				kafka-consumer-groups			kafka-verifiable-producer
+confluent-hub				kafka-consumer-perf-test		ksql
+confluent-rebalancer			kafka-delegation-tokens			ksql-datagen
+connect-distributed			kafka-delete-records			ksql-print-metrics
+connect-standalone			kafka-dump-log				ksql-run-class
+connect.stdout				kafka-log-dirs				ksql-server-start
+control-center-3_0_0-reset		kafka-mirror-maker			ksql-server-stop
+control-center-3_0_1-reset		kafka-mqtt-run-class			ksql-stop
+control-center-console-consumer		kafka-mqtt-start			ksql-test-runner
+control-center-export			kafka-mqtt-stop				replicator
+control-center-reset			kafka-preferred-replica-election	schema-registry-run-class
+control-center-run-class		kafka-producer-perf-test		schema-registry-start
+control-center-set-acls			kafka-reassign-partitions		schema-registry-stop
+control-center-start			kafka-replica-verification		schema-registry-stop-service
+control-center-stop			kafka-rest-run-class			security-plugins-run-class
+decrypted.txt				kafka-rest-start			sr-acl-cli
+kafka-acls				kafka-rest-stop				stub-api-run-class
+kafka-api-start				kafka-rest-stop-service			stub-api-start
+kafka-avro-console-consumer		kafka-run-class				support-metrics-bundle
+kafka-avro-console-producer		kafka-server-start			windows
+kafka-broker-api-versions		kafka-server-stop			zookeeper-security-migration
+kafka-configs				kafka-streams-application-reset		zookeeper-server-start
+kafka-console-consumer			kafka-topics				zookeeper-server-stop
+kafka-console-producer			kafka-verifiable-consumer		zookeeper-shell
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./confluent local start
+Updates are available for confluent. To install them, please run:
+$ confluent update
+
+    The local commands are intended for a single-node development environment
+    only, NOT for production usage. https://docs.confluent.io/current/cli/index.html
+
+Using CONFLUENT_CURRENT: /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy
+Starting zookeeper
+zookeeper is [DOWN]
+Cannot start Kafka, Zookeeper is not running. Check your deployment
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./confluent status
+Error: unknown command "status" for "confluent"
+Run 'confluent --help' for usage.
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./confluent local status
+    The local commands are intended for a single-node development environment
+    only, NOT for production usage. https://docs.confluent.io/current/cli/index.html
+
+control-center is [DOWN]
+ksql-server is [DOWN]
+connect is [DOWN]
+kafka-rest is [DOWN]
+schema-registry is [DOWN]
+kafka is [DOWN]
+zookeeper is [DOWN]
+Matthew-Mangias-MBP15:bin matthew.mangia$ jps
+57984 Jps
+45873 QuorumPeerMain
+57567 
+Matthew-Mangias-MBP15:bin matthew.mangia$ ps -ef
+  UID   PID  PPID   C STIME   TTY           TIME CMD
+    0     1     0   0  9Jul19 ??        36:51.89 /sbin/launchd
+    0    41     1   0  9Jul19 ??         2:23.35 /usr/sbin/syslogd
+    0    42     1   0  9Jul19 ??         0:39.82 /usr/libexec/UserEventAgent (System)
+    0    45     1   0  9Jul19 ??         0:16.61 /System/Library/PrivateFrameworks/Uninstall.framework/Resources/uninstalld
+    0    46     1   0  9Jul19 ??         0:39.46 /usr/libexec/kextd
+    0    47     1   0  9Jul19 ??         8:09.01 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/Support/fseventsd
+    0    49     1   0  9Jul19 ??         0:23.62 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted
+   55    52     1   0  9Jul19 ??         0:01.90 /System/Library/CoreServices/appleeventsd --server
+    0    53     1   0  9Jul19 ??        25:15.10 /usr/sbin/systemstats --daemon
+    0    55     1   0  9Jul19 ??         1:03.74 /usr/libexec/configd
+    0    57     1   0  9Jul19 ??         6:30.68 /System/Library/CoreServices/powerd.bundle/powerd
+    0    60     1   0  9Jul19 ??         5:29.86 /usr/libexec/logd
+    0    61     1   0  9Jul19 ??         0:00.01 /usr/libexec/keybagd -t 15
+    0    67     1   0  9Jul19 ??         8:44.38 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds
+  240    68     1   0  9Jul19 ??         0:00.14 /System/Library/CoreServices/iconservicesd
+    0    69     1   0  9Jul19 ??         0:06.82 /usr/libexec/diskarbitrationd
+    0    72     1   0  9Jul19 ??         0:03.03 /System/Library/CoreServices/backupd.bundle/Contents/Resources/backupd-helper -launchd
+    0    73     1   0  9Jul19 ??         0:38.05 /usr/libexec/coreduetd
+    0    76     1   0  9Jul19 ??         2:02.91 /usr/libexec/opendirectoryd
+    0    77     1   0  9Jul19 ??         8:39.67 /Library/Bitdefender/AVP/enterprise.bundle/epagd
+    0    78     1   0  9Jul19 ??         0:32.79 /System/Library/PrivateFrameworks/ApplePushService.framework/apsd
+    0    79     1   0  9Jul19 ??         0:00.01 /Library/PrivilegedHelperTools/com.docker.vmnetd
+    0    80     1   0  9Jul19 ??         0:00.96 /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbstated
+    0    81     1   0  9Jul19 ??         2:02.33 /System/Library/CoreServices/launchservicesd
+  266    82     1   0  9Jul19 ??         0:15.86 /usr/libexec/timed
+    0    84     1   0  9Jul19 ??         1:08.02 /usr/sbin/securityd -i
+  205    87     1   0  9Jul19 ??         7:15.95 /usr/libexec/locationd
+    0    89     1   0  9Jul19 ??         0:00.05 autofsd
+  244    90     1   0  9Jul19 ??         0:05.35 /usr/libexec/displaypolicyd -k 1
+    0    92     1   0  9Jul19 ??         1:12.12 /usr/libexec/dasd
+  501    96     1   0  9Jul19 ??         1:30.34 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow console
+    0    97     1   0  9Jul19 ??         0:00.44 /System/Library/CoreServices/logind
+    0    98     1   0  9Jul19 ??         0:01.55 /System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond
+    0    99     1   0  9Jul19 ??         0:00.03 /usr/sbin/KernelEventAgent
+    0   101     1   0  9Jul19 ??         1:11.66 /usr/sbin/bluetoothd
+  261   102     1   0  9Jul19 ??       118:48.83 /usr/libexec/hidd
+    0   104     1   0  9Jul19 ??         5:00.68 /usr/libexec/corebrightnessd --launchd
+    0   105     1   0  9Jul19 ??         0:40.52 /usr/libexec/AirPlayXPCHelper
+    0   106     1   0  9Jul19 ??         2:24.33 /usr/sbin/notifyd
+  241   108     1   0  9Jul19 ??         0:16.01 /usr/sbin/distnoted daemon
+    0   109     1   0  9Jul19 ??         0:06.06 /usr/libexec/amfid
+    0   110     1   0  9Jul19 ??         0:02.37 /usr/libexec/taskgated
+    0   120     1   0  9Jul19 ??         1:18.57 /usr/sbin/cfprefsd daemon
+    0   125     1   0  9Jul19 ??         0:06.30 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd
+    0   151     1   0  9Jul19 ??         1:11.01 /System/Library/CoreServices/coreservicesd
+    0   153     1   0  9Jul19 ??         0:00.03 /System/Library/Frameworks/PCSC.framework/Versions/A/XPCServices/com.apple.ctkpcscd.xpc/Contents/MacOS/com.apple.ctkpcscd
+    0   156     1   0  9Jul19 ??         2:01.91 /usr/libexec/trustd
+    0   168     1   0  9Jul19 ??         0:14.52 /usr/libexec/mobileassetd
+  242   171     1   0  9Jul19 ??         0:24.46 /usr/libexec/nsurlsessiond --privileged
+    0   185     1   0  9Jul19 ??         0:00.53 aslmanager
+  259   186     1   0  9Jul19 ??         0:00.02 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd -s
+    0   188     1   0  9Jul19 ??         2:02.65 /System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/contextstored
+   88   189     1   0  9Jul19 ??       505:54.90 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer -daemon
+    0   190     1   0  9Jul19 ??         0:04.86 /usr/libexec/nehelper
+  202   192     1   0  9Jul19 ??       157:32.37 /usr/sbin/coreaudiod
+    0   193     1   0  9Jul19 ??         0:08.23 /usr/libexec/lsd runAsRoot
+   65   194     1   0  9Jul19 ??         0:47.03 /usr/sbin/mDNSResponder
+  202   195     1   0  9Jul19 ??         0:00.95 /System/Library/Frameworks/CoreAudio.framework/Versions/A/XPCServices/com.apple.audio.DriverHelper.xpc/Contents/MacOS/com.apple.audio.DriverHelper
+   24   196     1   0  9Jul19 ??         2:39.10 /usr/libexec/symptomsd
+    0   198     1   0  9Jul19 ??         0:04.91 /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd
+    0   199     1   0  9Jul19 ??         0:23.48 /usr/sbin/mDNSResponderHelper
+    0   201     1   0  9Jul19 ??         0:00.01 /usr/libexec/multiversed
+    0   202     1   0  9Jul19 ??         0:00.24 /System/Library/CryptoTokenKit/com.apple.ifdreader.slotd/Contents/MacOS/com.apple.ifdreader
+    0   203     1   0  9Jul19 ??         0:01.00 /usr/libexec/apfsd
+    0   204     1   0  9Jul19 ??         9:24.74 /usr/libexec/airportd
+    0   205     1   0  9Jul19 ??         0:03.44 /usr/libexec/usbd
+  262   206     1   0  9Jul19 ??         8:46.43 /System/Library/Frameworks/CoreMediaIO.framework/Resources/VDC.plugin/Contents/Resources/VDCAssistant
+    0   208     1   0  9Jul19 ??         0:40.23 /usr/libexec/ApplicationFirewall/socketfilterfw
+  200   209     1   0  9Jul19 ??         0:02.35 /System/Library/PrivateFrameworks/BridgeOSSoftwareUpdate.framework/Support/bosUpdateProxy
+    0   210     1   0  9Jul19 ??         0:03.13 /System/Library/CoreServices/SubmitDiagInfo server-init
+    0   214     1   0  9Jul19 ??        52:14.82 /Library/Bitdefender/AVP/antivirus.bundle/BDUpdDaemon
+    0   215     1   0  9Jul19 ??       225:10.86 /Library/Bitdefender/AVP/BDLDaemon
+    0   216     1   0  9Jul19 ??         3:50.31 /Library/Bitdefender/AVP/common.bundle/BDCoreIssues
+  243   229     1   0  9Jul19 ??         0:00.38 /usr/libexec/nsurlstoraged --privileged
+  263   253     1   0  9Jul19 ??         0:20.94 /System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd
+    0   254     1   0  9Jul19 ??         0:17.55 /usr/libexec/watchdogd
+    0   258     1   0  9Jul19 ??         0:00.03 /usr/libexec/smd
+    0   264     1   0  9Jul19 ??         0:21.67 /System/Library/PrivateFrameworks/TCC.framework/Resources/tccd system
+    0   342     1   0  9Jul19 ??         0:00.60 /System/Library/Frameworks/AudioToolbox.framework/AudioComponentRegistrar -daemon
+  202   344     1   0  9Jul19 ??         0:00.01 /System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.SandboxHelper.xpc/Contents/MacOS/com.apple.audio.SandboxHelper
+    0   356     1   0  9Jul19 ??         0:01.62 /usr/libexec/thermald
+    0   376     1   0  9Jul19 ??        13:50.64 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mds_stores
+    0   378     1   0  9Jul19 ??         0:01.00 /usr/libexec/secinitd
+    0   382     1   0  9Jul19 ??        22:53.15 /usr/libexec/TouchBarServer
+    0   383     1   0  9Jul19 ??         0:00.64 /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/CVMServer
+    0   384     1   0  9Jul19 ??         0:02.70 /usr/libexec/colorsync.displayservices
+    0   385     1   0  9Jul19 ??         0:00.41 /usr/libexec/colorsyncd
+    0   394     1   0  9Jul19 ??       296:21.80 /usr/libexec/sysmond
+    0   404     1   0  9Jul19 ??         0:01.41 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/com.apple.CodeSigningHelper.xpc/Contents/MacOS/com.apple.CodeSigningHelper
+    0   405    53   0  9Jul19 ??         0:04.90 /usr/sbin/systemstats --logger-helper /private/var/db/systemstats
+    0   408     1   0  9Jul19 ??         0:00.02 /usr/libexec/bootinstalld
+    0   413     1   0  9Jul19 ??         0:00.36 /System/Library/Frameworks/CoreMediaIO.framework/Versions/A/XPCServices/com.apple.cmio.registerassistantservice.xpc/Contents/MacOS/com.apple.cmio.registerassistantservice
+    0   414     1   0  9Jul19 ??         0:01.13 /System/Library/CoreServices/sharedfilelistd
+    0   417     1   0  9Jul19 ??         0:20.57 /System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/XPCServices/com.apple.PerformanceAnalysis.animationperfd.xpc/Contents/MacOS/com.apple.PerformanceAnalysis.animationperfd
+    0   418     1   0  9Jul19 ??         0:00.19 /System/Library/PrivateFrameworks/AccountPolicy.framework/XPCServices/com.apple.AccountPolicyHelper.xpc/Contents/MacOS/com.apple.AccountPolicyHelper
+    0   421     1   0  9Jul19 ??         0:00.06 /System/Library/Frameworks/GSS.framework/Helpers/GSSCred
+   88   423     1   0  9Jul19 ??         0:04.36 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+    0   428     1   0  9Jul19 ??         2:11.71 /System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/XPCServices/ViewBridgeAuxiliary.xpc/Contents/MacOS/ViewBridgeAuxiliary
+    0   429     1   0  9Jul19 ??         0:02.31 /usr/sbin/distnoted agent
+    0   430     1   0  9Jul19 ??         0:02.43 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+  501   432     1   0  9Jul19 ??         0:00.75 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+    0   433     1   0  9Jul19 ??         0:07.47 /usr/libexec/biometrickitd --launchd
+  501   434     1   0  9Jul19 ??         0:59.00 /usr/sbin/cfprefsd agent
+    0   435     1   0  9Jul19 ??         0:00.02 /usr/libexec/securityd_service
+    0   436     1   0  9Jul19 ??         0:01.39 /usr/libexec/biokitaggdd
+  501   437     1   0  9Jul19 ??         1:10.66 /usr/libexec/UserEventAgent (Aqua)
+  501   439     1   0  9Jul19 ??         0:40.91 /usr/sbin/distnoted agent
+  501   441     1   0  9Jul19 ??         0:44.59 /System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter -L
+  501   443     1   0  9Jul19 ??         0:07.55 /usr/libexec/lsd
+  501   444     1   0  9Jul19 ??         3:14.79 /usr/libexec/trustd --agent
+    0   446     1   0  9Jul19 ??         0:00.64 /System/Library/PrivateFrameworks/EmbeddedOSInstall.framework/Versions/A/XPCServices/EmbeddedOSInstallService.xpc/Contents/MacOS/EmbeddedOSInstallService
+  501   447     1   0  9Jul19 ??         0:02.84 /System/Library/CoreServices/sharedfilelistd
+  501   450     1   0  9Jul19 ??        27:57.10 /Applications/Utilities/Terminal.app/Contents/MacOS/Terminal -psn_0_61455
+  501   451     1   0  9Jul19 ??       353:04.02 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome -psn_0_65552
+  501   458     1   0  9Jul19 ??       113:21.66 /Applications/Slack.app/Contents/MacOS/Slack -psn_0_69649
+  501   459     1   0  9Jul19 ??         0:06.82 /usr/libexec/secd
+  501   461     1   0  9Jul19 ??         0:01.02 /System/Library/CoreServices/backgroundtaskmanagementagent
+    0   468     1   0  9Jul19 ??         0:06.68 /usr/sbin/WirelessRadioManagerd
+  501   470     1   0  9Jul19 ??         0:18.00 /System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd
+  501   471     1   0  9Jul19 ??         0:29.50 /System/Library/CoreServices/talagent
+  501   472     1   0  9Jul19 ??         7:10.96 /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock
+  501   473     1   0  9Jul19 ??         0:07.45 /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+  501   474     1   0  9Jul19 ??         3:04.56 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
+  501   475     1   0  9Jul19 ??         6:53.53 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+  501   477     1   0  9Jul19 ??         1:03.71 /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd
+  501   480     1   0  9Jul19 ??         1:17.18 /System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd
+  501   482     1   0  9Jul19 ??         0:10.39 /usr/libexec/rapportd
+    0   483     1   0  9Jul19 ??         0:12.96 /usr/sbin/systemsoundserverd
+  501   484     1   0  9Jul19 ??         0:05.64 /usr/libexec/pboard
+  501   485     1   0  9Jul19 ??         0:06.88 /System/Library/PrivateFrameworks/TCC.framework/Resources/tccd
+  501   486     1   0  9Jul19 ??         0:16.40 /usr/libexec/nsurlsessiond
+  501   487     1   0  9Jul19 ??         0:21.07 /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/Contents/MacOS/imagent
+  501   488     1   0  9Jul19 ??         1:43.83 /usr/libexec/routined LAUNCHED_BY_LAUNCHD
+  501   489     1   0  9Jul19 ??         0:18.94 /usr/sbin/usernoted
+  501   490     1   0  9Jul19 ??         1:22.63 /System/Library/CoreServices/ControlStrip.app/Contents/MacOS/ControlStrip
+  501   491     1   0  9Jul19 ??         0:00.57 /usr/libexec/networkserviceproxy
+  501   492     1   0  9Jul19 ??         0:28.29 /System/Library/PrivateFrameworks/IMDPersistence.framework/XPCServices/IMDPersistenceAgent.xpc/Contents/MacOS/IMDPersistenceAgent
+  501   493     1   0  9Jul19 ??         0:04.44 /System/Library/Frameworks/AddressBook.framework/Executables/ContactsAccountsService
+  501   495     1   0  9Jul19 ??         0:03.60 /usr/libexec/secinitd
+  501   497     1   0  9Jul19 ??         2:52.34 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd
+  501   498     1   0  9Jul19 ??         0:17.89 /usr/libexec/pkd
+  501   499     1   0  9Jul19 ??         9:44.60 /System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter
+  501   501     1   0  9Jul19 ??         2:51.18 /System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/XPCServices/ViewBridgeAuxiliary.xpc/Contents/MacOS/ViewBridgeAuxiliary
+    0   504     1   0  9Jul19 ??         0:00.36 /System/Library/CoreServices/CrashReporterSupportHelper server-init
+  501   506     1   0  9Jul19 ??         0:02.11 /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/Support/bird
+    0   507     1   0  9Jul19 ??         0:04.53 /usr/sbin/wirelessproxd
+  501   508     1   0  9Jul19 ??         0:00.36 /System/Library/CoreServices/APFSUserAgent
+  501   509     1   0  9Jul19 ??         1:10.98 /System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight
+  501   510     1   0  9Jul19 ??         0:00.83 /System/Library/Frameworks/Security.framework/Versions/A/Resources/CloudKeychainProxy.bundle/Contents/MacOS/CloudKeychainProxy
+  501   511     1   0  9Jul19 ??         0:09.70 /System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd
+  501   512     1   0  9Jul19 ??         0:30.92 /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent
+  501   514     1   0  9Jul19 ??         0:00.48 /System/Library/PrivateFrameworks/CoreCDP.framework/Versions/A/Resources/cdpd
+  501   515     1   0  9Jul19 ??         0:00.92 /System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Helpers/ProtectedCloudKeySyncing
+  501   516     1   0  9Jul19 ??         0:00.44 /System/Library/CoreServices/EscrowSecurityAlert.app/Contents/MacOS/EscrowSecurityAlert
+  501   517     1   0  9Jul19 ??         0:26.21 /System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification
+  501   518     1   0  9Jul19 ??         0:20.06 /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/MacOS/ARDAgent
+  501   519     1   0  9Jul19 ??         0:37.86 /usr/libexec/studentd
+  501   521     1   0  9Jul19 ??         1:40.25 /usr/libexec/sharingd
+  501   523     1   0  9Jul19 ??         0:27.30 /System/Library/CoreServices/RemoteManagement/SSMenuAgent.app/Contents/MacOS/SSMenuAgent
+  501   524     1   0  9Jul19 ??         0:00.87 /System/Library/PrivateFrameworks/FamilyCircle.framework/Versions/A/Resources/familycircled
+  501   527     1   0  9Jul19 ??         0:11.21 /usr/libexec/nsurlstoraged
+  501   534     1   0  9Jul19 ??         0:14.33 /System/Library/PrivateFrameworks/CoreParsec.framework/parsecd
+  501   535     1   0  9Jul19 ??         1:10.80 /System/Library/CoreServices/iconservicesagent
+  265   536     1   0  9Jul19 ??         0:01.01 /System/Library/PrivateFrameworks/CoreADI.framework/adid
+  501   537     1   0  9Jul19 ??         0:23.17 /System/Library/PrivateFrameworks/MessagesKit.framework/Resources/soagent.app/Contents/MacOS/soagent
+  501   538     1   0  9Jul19 ??         0:50.67 /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd
+  247   539     1   0  9Jul19 ??         0:26.97 /usr/libexec/gamecontrollerd
+  501   540     1   0  9Jul19 ??         0:14.92 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/commerce
+  501   541     1   0  9Jul19 ??         0:16.12 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+  501   542     1   0  9Jul19 ??         0:30.91 /System/Library/CoreServices/Dock.app/Contents/XPCServices/com.apple.dock.extra.xpc/Contents/MacOS/com.apple.dock.extra
+    0   544     1   0  9Jul19 ??         0:00.98 /usr/sbin/filecoordinationd
+  501   548     1   0  9Jul19 ??         0:00.48 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --database=/Users/matthew.mangia/Library/Application Support/Google/Chrome/Crashpad --metrics-dir=/Users/matthew.mangia/Library/Application Support/Google/Chrome --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=plat=OS X --annotation=prod=Chrome_Mac --annotation=ver=75.0.3770.100 --handshake-fd=8
+  501   549     1   0  9Jul19 ??         0:01.04 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeaccountd
+  501   550     1   0  9Jul19 ??         0:09.22 /System/Library/PrivateFrameworks/CoreWLANKit.framework/Versions/A/XPCServices/WiFiProxy.xpc/Contents/MacOS/WiFiProxy
+  501   552     1   0  9Jul19 ??         0:01.64 /usr/libexec/fmfd
+  501   553     1   0  9Jul19 ??         6:24.61 /System/Library/PrivateFrameworks/CalendarAgent.framework/Executables/CalendarAgent
+  501   555     1   0  9Jul19 ??         0:00.01 /System/Library/PrivateFrameworks/login.framework/Versions/A/XPCServices/LoginUserService.xpc/Contents/MacOS/LoginUserService
+  501   562     1   0  9Jul19 ??         2:01.71 /System/Library/PrivateFrameworks/CalendarNotification.framework/Versions/A/XPCServices/CalNCService.xpc/Contents/MacOS/CalNCService
+  501   564   451   0  9Jul19 ??       194:48.00 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=gpu-process --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --gpu-preferences=KAAAAAAAAAAgAAAAAQAAAAAAAAAAAGAAAAAAAAAAAAAIAAAAAAAAAAABAAAfAAAA+AAAAAAAAAAAAQAAAAAAAAgBAAAAAAAAEAEAAAAAAAAYAQAAAAAAACABAAAAAAAAKAEAAAAAAAAwAQAAAAAAADgBAAAAAAAAQAEAAAAAAABIAQAAAAAAAFABAAAAAAAAWAEAAAAAAABgAQAAAAAAAGgBAAAAAAAAcAEAAAAAAAB4AQAAAAAAAIABAAAAAAAAiAEAAAAAAACQAQAAAAAAAJgBAAAAAAAAoAEAAAAAAACoAQAAAAAAALABAAAAAAAAuAEAAAAAAADAAQAAAAAAAMgBAAAAAAAA0AEAAAAAAADYAQAAAAAAAOABAAAAAAAA6AEAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAABgAAABAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAACgAAABAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAAAAAAANAAAAEAAAAAAAAAAAAAAADgAAABAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAAEAAAAGAAAAEAAAAAAAAAABAAAABwAAABAAAAAAAAAAAQAAAAgAAAAQAAAAAAAAAAEAAAAKAAAAEAAAAAAAAAABAAAACwAAABAAAAAAAAAAAQAAAA0AAAAQAAAAAAAAAAEAAAAOAAAAEAAAAAAAAAAEAAAAAAAAABAAAAAAAAAABAAAAAYAAAAQAAAAAAAAAAQAAAAHAAAAEAAAAAAAAAAEAAAACAAAABAAAAAAAAAABAAAAAoAAAAQAAAAAAAAAAQAAAALAAAAEAAAAAAAAAAEAAAADQAAABAAAAAAAAAABAAAAA4AAAAQAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAAGAAAABgAAABAAAAAAAAAABgAAAAgAAAAQAAAAAAAAAAYAAAAKAAAAEAAAAAAAAAAGAAAACwAAABAAAAAAAAAABgAAAA0AAAAQAAAAAAAAAAYAAAAOAAAA --service-request-channel-token=6188056844982550895
+  501   566     1   0  9Jul19 ??         0:05.52 /System/Library/PrivateFrameworks/PassKitCore.framework/passd
+  501   570   451   0  9Jul19 ??        50:51.67 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=utility --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --service-sandbox-type=network --service-request-channel-token=13836622137610491784
+  260   572     1   0  9Jul19 ??         0:01.00 /usr/libexec/nfcd
+    0   575     1   0  9Jul19 ??         0:00.04 /System/Library/PrivateFrameworks/AssetCacheServicesExtensions.framework/XPCServices/AssetCacheManagerService.xpc/Contents/MacOS/AssetCacheManagerService
+  501   578     1   0  9Jul19 ??         0:00.73 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoteagent
+  501   579     1   0  9Jul19 ??         0:00.02 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/XPCServices/AlertNotificationService.xpc/Contents/MacOS/AlertNotificationService
+  501   588     1   0  9Jul19 ??         0:01.35 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+  501   591     1   0  9Jul19 ??         0:00.24 /System/Library/PrivateFrameworks/CoreFollowUp.framework/Versions/A/Support/followupd
+  501   592     1   0  9Jul19 ??         0:02.17 /System/Library/PrivateFrameworks/CallHistory.framework/Support/CallHistoryPluginHelper
+    0   599     1   0  9Jul19 ??         0:10.04 /usr/libexec/findmydeviced
+  501   602     1   0  9Jul19 ??         0:02.84 /System/Library/CoreServices/pbs
+  501   615     1   0  9Jul19 ??         0:27.67 /System/Library/CoreServices/CoreLocationAgent.app/Contents/MacOS/CoreLocationAgent
+  501   616     1   0  9Jul19 ??        27:30.01 /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell
+  501   633     1   0  9Jul19 ??         0:09.13 /usr/libexec/keyboardservicesd
+  501   635     1   0  9Jul19 ??         0:19.59 /System/Library/Frameworks/InputMethodKit.framework/Resources/imklaunchagent
+  501   637     1   0  9Jul19 ??         0:49.88 /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension
+  501   638     1   0  9Jul19 ??         2:55.16 /System/Library/Input Methods/EmojiFunctionRowIM.app/Contents/PlugIns/EmojiFunctionRowIM_Extension.appex/Contents/MacOS/EmojiFunctionRowIM_Extension
+  501   640   451   0  9Jul19 ??         3:31.54 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=2364552538845802110 --renderer-client-id=14 --no-v8-untrusted-code-mitigations --seatbelt-client=92
+  501   641   451   0  9Jul19 ??         0:18.12 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=3255320560090802212 --renderer-client-id=4 --no-v8-untrusted-code-mitigations --seatbelt-client=92
+  501   643     1   0  9Jul19 ??         0:01.25 /usr/libexec/videosubscriptionsd
+  501   645     1   0  9Jul19 ??         0:00.35 /System/Library/PrivateFrameworks/CharacterPicker.framework/Versions/A/XPCServices/com.apple.CharacterPicker.FileService.xpc/Contents/MacOS/com.apple.CharacterPicker.FileService
+  501   653   451   0  9Jul19 ??         0:03.96 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=11757559201140639916 --renderer-client-id=6 --no-v8-untrusted-code-mitigations --seatbelt-client=92
+  501   654   451   0  9Jul19 ??         0:33.30 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=15918107066826514567 --renderer-client-id=7 --no-v8-untrusted-code-mitigations --seatbelt-client=93
+  501   655   451   0  9Jul19 ??        19:34.51 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=6508367635994344216 --renderer-client-id=8 --no-v8-untrusted-code-mitigations --seatbelt-client=104
+  501   656   451   0  9Jul19 ??         0:04.02 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=14453918160041760999 --renderer-client-id=9 --no-v8-untrusted-code-mitigations --seatbelt-client=105
+  501   660     1   0  9Jul19 ??         0:00.01 SafeEjectGPUAgent
+  501   661     1   0  9Jul19 ??         0:00.68 /System/Library/CoreServices/Menu Extras/SafeEjectGPUExtra.menu/Contents/XPCServices/SafeEjectGPUService.xpc/Contents/MacOS/SafeEjectGPUService
+    0   663     1   0  9Jul19 ??         0:04.63 /usr/sbin/spindump
+  501   664     1   0  9Jul19 ??         0:00.36 /usr/libexec/spindump_agent
+  501   672   458   0  9Jul19 ??        34:01.97 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper --type=gpu-process --enable-features=SharedArrayBuffer --disable-features=MacV2Sandbox --gpu-preferences=KAAAAAAAAACAAAAAAQAAAAAAAAAAAGAAAAAAAAAAAAAIAAAAAAAAADgBAAAmAAAAMAEAAAAAAAA4AQAAAAAAAEABAAAAAAAASAEAAAAAAABQAQAAAAAAAFgBAAAAAAAAYAEAAAAAAABoAQAAAAAAAHABAAAAAAAAeAEAAAAAAACAAQAAAAAAAIgBAAAAAAAAkAEAAAAAAACYAQAAAAAAAKABAAAAAAAAqAEAAAAAAACwAQAAAAAAALgBAAAAAAAAwAEAAAAAAADIAQAAAAAAANABAAAAAAAA2AEAAAAAAADgAQAAAAAAAOgBAAAAAAAA8AEAAAAAAAD4AQAAAAAAAAACAAAAAAAACAIAAAAAAAAQAgAAAAAAABgCAAAAAAAAIAIAAAAAAAAoAgAAAAAAADACAAAAAAAAOAIAAAAAAABAAgAAAAAAAEgCAAAAAAAAUAIAAAAAAABYAgAAAAAAABAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAAAAAAALAAAAEAAAAAAAAAAAAAAADAAAABAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAAAAAAAPAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAAAAAAATAAAAEAAAAAAAAAABAAAABQAAABAAAAAAAAAAAQAAAAsAAAAQAAAAAAAAAAEAAAAMAAAAEAAAAAAAAAABAAAADQAAABAAAAAAAAAAAQAAAA8AAAAQAAAAAAAAAAEAAAAQAAAAEAAAAAAAAAABAAAAEgAAABAAAAAAAAAAAQAAABMAAAAQAAAAAAAAAAQAAAAFAAAAEAAAAAAAAAAEAAAACwAAABAAAAAAAAAABAAAAAwAAAAQAAAAAAAAAAQAAAANAAAAEAAAAAAAAAAEAAAADwAAABAAAAAAAAAABAAAABAAAAAQAAAAAAAAAAQAAAASAAAAEAAAAAAAAAAEAAAAEwAAABAAAAAAAAAABgAAAAUAAAAQAAAAAAAAAAYAAAALAAAAEAAAAAAAAAAGAAAADQAAABAAAAAAAAAABgAAAA8AAAAQAAAAAAAAAAYAAAAQAAAAEAAAAAAAAAAGAAAAEgAAABAAAAAAAAAABgAAABMAAAAQAAAAAAAAAAcAAAAFAAAAEAAAAAAAAAAHAAAACwAAABAAAAAAAAAABwAAAA0AAAAQAAAAAAAAAAcAAAAPAAAAEAAAAAAAAAAHAAAAEAAAABAAAAAAAAAABwAAABIAAAAQAAAAAAAAAAcAAAATAAAA --service-request-channel-token=8970221909252773331
+  501   674     1   0  9Jul19 ??         3:08.71 /System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/suggestd
+  501   677     1   0  9Jul19 ??         0:00.75 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+  501   678     1   0  9Jul19 ??         0:01.11 /System/Library/PrivateFrameworks/CacheDelete.framework/deleted
+    0   680     1   0  9Jul19 ??         0:00.19 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp -d
+  501   682     1   0  9Jul19 ??         0:00.39 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp
+  501   684     1   0  9Jul19 ??         0:00.43 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd -tw
+  501   687     1   0  9Jul19 ??         0:00.34 /Applications/Slack.app/Contents/Frameworks/Electron Framework.framework/Resources/crashpad_handler --no-rate-limit --no-upload-gzip --database=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/Slack Crashes --metrics-dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/Slack Crashes --url=https://slack.com/apps/breakpad?instanceUid=e61e6c03-8e4a-577e-9fc8-b85cca9bd8f2&version=3.4.2&channel=prod --handshake-fd=55
+  501   695   458   0  9Jul19 ??         3:13.15 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper --type=renderer --autoplay-policy=no-user-gesture-required --force-color-profile=srgb --enable-features=SharedArrayBuffer --disable-features=MacV2Sandbox --service-pipe-token=17079331449081088576 --lang=en-US --standard-schemes=slack-resources,slack-sounds,slack-webapp-dev --secure-schemes=slack-resources,slack-sounds,slack-webapp-dev --app-path=/Applications/Slack.app/Contents/Resources/app.asar --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Slack/3.4.2 Chrome/69.0.3497.128 Electron/4.2.1 Safari/537.36 --node-integration=true --webview-tag=false --no-sandbox --preload=/Applications/Slack.app/Contents/Resources/app.asar/src/static/index.js --background-color=#FFFFFF --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=17079331449081088576 --renderer-client-id=6 {"loadSettings":{"chromeDriver":false,"devEnv":null,"devMode":false,"invokedOnStartup":false,"logFile":null,"resourcePath":"/Applications/Slack.app/Contents/Resources/app.asar","rxLogging":false,"version":"3.4.2","webappSrcPath":false,"sessionId":"ZTYxZTZjMDMtOGU0YS01NzdlLTlmYzgtYjg1Y2NhOWJkOGYyXzE1NjI2OTg3NDk5NDQ=","appVersion":"3.4.2","isAeroGlassEnabled":false,"isDevMode":false,"isGpuCompositionAvailable":true,"isTitleBarHidden":false,"launchOnStartup":false,"openDevToolsOnStart":false,"platformVersion":{"major":18,"minor":6,"build":0},"pretendNotReallyWindows10":false,"releaseChannel":"prod","versionName":"Eye of the Tiger","webappParams":null,"webPreferences":{"webviewTag":false,"contextIsolation":false,"nodeIntegration":true,"preload":"/Applications/Slack.app/Contents/Resources/app.asar/src/static/index.js"},"title":"Slack","autoHideMenuBar":false,"show":false,"windowType":"main","bootstrapScript":"/Applications/Slack.app/Contents/Resources/app.asar/src/renderer/main.tsx","acceptFirstMouse":false,"backgroundColor":"#FFFFFF","minHeight":400,"minWidth":600,"type":"main","options":{"chromeDriver":false,"devEnv":null,"devMode":false,"invokedOnStartup":false,"logFile":null,"resourcePath":"/Applications/Slack.app/Contents/Resources/app.asar","rxLogging":false,"version":"3.4.2","webappSrcPath":false,"sessionId":"ZTYxZTZjMDMtOGU0YS01NzdlLTlmYzgtYjg1Y2NhOWJkOGYyXzE1NjI2OTg3NDk5NDQ=","appVersion":"3.4.2","isAeroGlassEnabled":false,"isDevMode":false,"isGpuCompositionAvailable":true,"isTitleBarHidden":false,"launchOnStartup":false,"openDevToolsOnStart":false,"platformVersion":{"major":18,"minor":6,"build":0},"pretendNotReallyWindows10":false,"releaseChannel":"prod","versionName":"Eye of the Tiger","webappParams":null}},"crashReporterOpts":{"productName":"Slack","companyName":"Slack Technologies","uploadToServer":true,"submitURL":"https://slack.com/apps/breakpad?instanceUid=e61e6c03-8e4a-577e-9fc8-b85cca9bd8f2","extra":{"instanceUid":"e61e6c03-8e4a-577e-9fc8-b85cca9bd8f2","sessionId":"ZTYxZTZjMDMtOGU0YS01NzdlLTlmYzgtYjg1Y2NhOWJkOGYyXzE1NjI2OTg3NDk5NDQ="}},"perfTimer":{"mainPid":458,"BOOT":[22,204886790],"numTeamsAtLaunch":1,"SHELL":[22,447848386],"APP_READY":[24,752413450],"MAIN_WINDOW_CREATING":[25,311205754]},"identifier":"slack_preload_metadata_arguments"}
+  501   699     1   0  9Jul19 ??         0:00.02 /System/Library/PrivateFrameworks/CloudServices.framework/Versions/A/XPCServices/com.apple.sbd.xpc/Contents/MacOS/com.apple.sbd
+  501   701     1   0  9Jul19 ??         0:07.68 /System/Library/PrivateFrameworks/FileProvider.framework/Support/fileproviderd
+  501   703     1   0  9Jul19 ??         0:06.25 /usr/libexec/knowledge-agent
+  260   724     1   0  9Jul19 ??         0:00.90 /usr/libexec/seld
+    0   726     1   0  9Jul19 ??         7:58.84 /System/Library/PrivateFrameworks/AmbientDisplay.framework/Versions/A/XPCServices/com.apple.AmbientDisplayAgent.xpc/Contents/MacOS/com.apple.AmbientDisplayAgent
+  501   729     1   0  9Jul19 ??         0:01.49 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdwrite
+  501   742     1   0  9Jul19 ??         0:22.70 /System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd
+  501   745     1   0  9Jul19 ??         0:00.83 /System/Library/CoreServices/SocialPushAgent.app/Contents/MacOS/SocialPushAgent
+  501   748     1   0  9Jul19 ??         0:01.35 /usr/libexec/dmd
+  501   749     1   0  9Jul19 ??         0:10.38 /System/Library/Image Capture/Support/icdd
+  501   750     1   0  9Jul19 ??        30:48.38 /Library/Bitdefender/AVP/EndpointSecurityforMac.app/Contents/MacOS/EndpointSecurityforMac
+  501   754     1   0  9Jul19 ??         0:29.36 /System/Library/CoreServices/AirPlayUIAgent.app/Contents/MacOS/AirPlayUIAgent --launchd
+  501   755     1   0  9Jul19 ??         0:19.47 /System/Library/CoreServices/cloudpaird
+  501   757     1   0  9Jul19 ??         0:37.48 /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbagent.app/Contents/MacOS/nbagent
+  501   758     1   0  9Jul19 ??         0:08.80 /System/Library/CoreServices/diagnostics_agent
+  501   759     1   0  9Jul19 ??         0:10.67 /usr/libexec/adprivacyd
+    0   788     1   0  9Jul19 ??         0:00.96 /System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd
+  205   814     1   0  9Jul19 ??         0:12.09 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+  205   817     1   0  9Jul19 ??         0:01.04 /usr/libexec/secinitd
+  205   818     1   0  9Jul19 ??         0:01.40 /usr/sbin/cfprefsd agent
+  205   821     1   0  9Jul19 ??         0:01.92 /usr/libexec/trustd --agent
+    0   841     1   0  9Jul19 ??         0:01.17 /usr/libexec/dmd
+  501   909     1   0  9Jul19 ??         0:00.30 /usr/libexec/loginitemregisterd
+  501   911     1   0  9Jul19 ??         0:01.16 /usr/libexec/swcd
+  501   912     1   0  9Jul19 ??         0:04.21 /System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/Support/assistantd
+    0   987     1   0  9Jul19 ??         0:05.43 /System/Library/CoreServices/iconservicesagent runAsRoot
+  501  1025     1   0  9Jul19 ??         0:00.51 /usr/libexec/findmydevice-user-agent
+  501  1120     1   0  9Jul19 ??         0:00.55 /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdate_notify_agent
+  200  1122     1   0  9Jul19 ??         2:39.14 /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+    0  1125     1   0  9Jul19 ??         0:01.47 /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd
+  501  1134     1   0  9Jul19 ??         0:00.40 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storelegacy
+  501  1136     1   0  9Jul19 ??         0:13.17 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeassetd
+  501  1137     1   0  9Jul19 ??         0:27.04 /System/Library/PrivateFrameworks/CommerceKit.framework/Resources/LaterAgent.app/Contents/MacOS/LaterAgent
+   89  1144     1   0  9Jul19 ??         0:04.19 /usr/libexec/trustd --agent
+  501  1145     1   0  9Jul19 ??         0:02.22 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/XPCServices/com.apple.hiservices-xpcservice.xpc/Contents/MacOS/com.apple.hiservices-xpcservice
+   89  1157     1   0  9Jul19 ??         0:02.67 /usr/sbin/distnoted agent
+    0  1164     1   0  9Jul19 ??         0:02.73 /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+  501  1170     1   0  9Jul19 ??         0:09.29 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd
+    0  1178     1   0  9Jul19 ??         0:00.37 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdsync -s mdworker-scan -c MDSSyncScanWorker -m com.apple.metadata.mds.scan
+  258  1188     1   0  9Jul19 ??         0:01.22 /usr/libexec/captiveagent
+  501  1190     1   0  9Jul19 ??         0:00.63 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  501  1191     1   0  9Jul19 ??         0:01.84 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  501  1209     1   0  9Jul19 ??         0:00.73 /System/Library/Frameworks/AudioToolbox.framework/AudioComponentRegistrar
+  501  1210     1   0  9Jul19 ??         0:02.36 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/SpeechSynthesis.framework/Resources/com.apple.speech.speechsynthesisd
+  501  1212     1   0  9Jul19 ??         1:48.42 /System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/SafariBookmarksSyncAgent
+  501  1215     1   0  9Jul19 ??         0:00.04 /usr/bin/ssh-agent -l
+  501  1233     1   0  9Jul19 ??         0:00.42 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/PrintCore.framework/Versions/A/printtool agent
+  501  1235     1   0  9Jul19 ??         0:01.71 /System/Library/CoreServices/ScopedBookmarkAgent
+  501  1430     1   0  9Jul19 ??         0:01.71 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/atsd
+  501  1431     1   0  9Jul19 ??         0:33.57 /System/Library/CoreServices/cloudphotosd.app/Contents/MacOS/cloudphotosd
+  501  1436     1   0  9Jul19 ??         0:01.42 /System/Library/PrivateFrameworks/CloudPhotoServices.framework/Versions/A/Frameworks/CloudPhotosConfigurationXPC.framework/Versions/A/XPCServices/com.apple.CloudPhotosConfiguration.xpc/Contents/MacOS/com.apple.CloudPhotosConfiguration
+  501  1437     1   0  9Jul19 ??         9:14.86 /System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Support/photolibraryd
+  501  1438     1   0  9Jul19 ??         0:08.77 /System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks/PhotoLibraryServices.framework/Versions/A/XPCServices/com.apple.photomoments.xpc/Contents/MacOS/com.apple.photomoments
+  501  1439     1   0  9Jul19 ??         5:02.48 /System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd
+  501  1440     1   0  9Jul19 ??         0:20.92 /System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent
+  501  1441     1   0  9Jul19 ??         0:00.43 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storedownloadd
+  600  1443     1   0  9Jul19 ??         0:02.27 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker-sizing -c MDSSizingWorker -m com.apple.mdworker.sizing
+   89  1444     1   0  9Jul19 ??         0:03.87 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker-sizing -c MDSSizingWorker -m com.apple.mdworker.sizing
+  501  1445     1   0  9Jul19 ??         0:00.40 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker-sizing -c MDSSizingWorker -m com.apple.mdworker.sizing
+  600  1446     1   0  9Jul19 ??         0:01.34 /usr/sbin/cfprefsd agent
+  600  1447     1   0  9Jul19 ??         0:00.45 /usr/libexec/lsd
+  600  1449     1   0  9Jul19 ??         0:04.20 /usr/libexec/trustd --agent
+    0  1515     1   0  9Jul19 ??         0:01.53 /usr/libexec/dprivacyd
+    0  1575     1   0  9Jul19 ??         0:00.04 /usr/libexec/periodic-wrapper daily
+  501  1576     1   0  9Jul19 ??         0:01.69 /System/Library/PrivateFrameworks/IMDPersistence.framework/IMAutomaticHistoryDeletionAgent.app/Contents/MacOS/IMAutomaticHistoryDeletionAgent
+  501  1641     1   0  9Jul19 ??         0:00.82 /System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTrackingAgent
+    0  1654     1   0  9Jul19 ??         0:19.02 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+    0  1655     1   0  9Jul19 ??         0:00.99 /usr/libexec/secinitd
+  501  1695     1   0  9Jul19 ??         0:00.78 /System/Library/PrivateFrameworks/CommunicationsFilter.framework/CMFSyncAgent
+  501  1699     1   0  9Jul19 ??         0:03.26 /System/Library/PrivateFrameworks/CoreRecents.framework/Versions/A/Support/recentsd
+  501  1700     1   0  9Jul19 ??         0:01.75 /System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/reversetemplated
+  501  1725     1   0  9Jul19 ??         0:30.10 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreautha.bundle/Contents/MacOS/coreautha
+  501  1733     1   0  9Jul19 ??         0:00.28 /usr/libexec/USBAgent
+  501  1824     1   0  9Jul19 ??         0:01.75 /usr/libexec/assertiond
+  501  1826     1   0  9Jul19 ??         0:29.92 /System/Library/PrivateFrameworks/UniversalAccess.framework/Versions/A/Resources/universalAccessAuthWarn.app/Contents/MacOS/universalAccessAuthWarn launchd -s
+  501  1878     1   0  9Jul19 ??         0:00.11 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501  2043     1   0  9Jul19 ??         0:06.55 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  501  2098     1   0  9Jul19 ??         0:30.63 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeuid.app/Contents/MacOS/storeuid
+  501  2100     1   0  9Jul19 ??         0:00.29 /System/Library/Frameworks/ColorSync.framework/Support/colorsync.useragent
+   97  2331     1   0  9Jul19 ??         0:00.93 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd
+  200  2334     1   0  9Jul19 ??         0:01.26 /usr/sbin/cfprefsd agent
+  200  2335     1   0  9Jul19 ??         0:02.21 /usr/sbin/distnoted agent
+  200  2353     1   0  9Jul19 ??         0:01.54 /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdate_download_service
+    0  2545     1   0  9Jul19 ??         0:00.41 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeinstalld
+  501  2548     1   0  9Jul19 ??         0:00.62 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/XPCServices/com.apple.CommerceKit.TransactionService.xpc/Contents/MacOS/com.apple.CommerceKit.TransactionService
+  501  2549     1   0  9Jul19 ??         0:02.98 /System/Library/CoreServices/mapspushd
+    0  2551     1   0  9Jul19 ??         0:09.68 /usr/libexec/mobileactivationd
+  501  2809     1   0  9Jul19 ??         0:00.44 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/XPCServices/com.apple.DictionaryServiceHelper.xpc/Contents/MacOS/com.apple.DictionaryServiceHelper
+  501  3003     1   0  9Jul19 ??         0:00.37 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501  3004     1   0  9Jul19 ??         0:00.13 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+    0  3005     1   0  9Jul19 ??         0:00.13 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+    0  3162     1   0  9Jul19 ??         0:00.13 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501  3475     1   0  9Jul19 ??         0:51.10 /System/Library/CoreServices/PowerChime.app/Contents/MacOS/PowerChime
+  501  3793     1   0  9Jul19 ??         0:33.42 /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuickLookUI.framework/Versions/A/XPCServices/QuickLookUIService.xpc/Contents/MacOS/QuickLookUIService
+  205  4201     1   0  9Jul19 ??         0:02.03 /usr/sbin/distnoted agent
+  501  4310     1   0 10Jul19 ??         0:01.67 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  501  4321     1   0 10Jul19 ??         0:01.51 /usr/libexec/silhouette
+  501  4322     1   0 10Jul19 ??         0:00.46 /System/Library/PrivateFrameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent
+  501  4323     1   0 10Jul19 ??         0:02.13 /System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks/PhotoLibraryServices.framework/Versions/A/XPCServices/com.apple.photomodel.xpc/Contents/MacOS/com.apple.photomodel
+    0  4325     1   0 10Jul19 ??         0:00.41 /usr/bin/sysdiagnose
+  235  4326     1   0 10Jul19 ??         0:00.94 /usr/libexec/AssetCache/AssetCache
+  501  4335     1   0 10Jul19 ??         0:00.78 /System/Library/PrivateFrameworks/ContextKit.framework/Versions/A/XPCServices/ContextService.xpc/Contents/MacOS/ContextService
+  501  4336     1   0 10Jul19 ??         0:01.41 /System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/XPCServices/media-indexer.xpc/Contents/MacOS/media-indexer
+  501  4337     1   0 10Jul19 ??         0:01.31 /System/Library/Frameworks/iTunesLibrary.framework/Versions/A/XPCServices/com.apple.iTunesLibraryService.xpc/Contents/MacOS/com.apple.iTunesLibraryService
+  501  4349     1   0 10Jul19 ??         0:30.48 /System/Library/PreferencePanes/Displays.prefPane/Contents/Resources/MirrorDisplays.app/Contents/MacOS/MirrorDisplays
+  501  4356     1   0 10Jul19 ??        10:32.90 /usr/libexec/avconferenced
+  501  4613     1   0 10Jul19 ??         0:18.89 /System/Library/CoreServices/ControlStrip.app/Contents/XPCServices/com.apple.DFRSystemExtra.Siri.xpc/Contents/MacOS/com.apple.DFRSystemExtra.Siri
+  501  4616     1   0 10Jul19 ??         0:00.91 /usr/libexec/siriknowledged
+  501  4662     1   0 10Jul19 ??         0:00.21 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+    0  4788     1   0 10Jul19 ??         0:07.04 /usr/libexec/rtcreportingd
+  501  6351     1   0 10Jul19 ??         0:00.43 /System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.xpc/Contents/MacOS/com.apple.SafariServices
+  501  6352     1   0 10Jul19 ??         0:06.91 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/XPCServices/com.apple.CommerceKit.TransactionService.xpc/Contents/MacOS/com.apple.CommerceKit.TransactionService
+  501  6365     1   0 10Jul19 ??         0:00.19 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501  6513     1   0 10Jul19 ??         0:07.88 /System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/XPCServices/AssetCacheLocatorService.xpc/Contents/MacOS/AssetCacheLocatorService -a
+  501  6792     1   0 10Jul19 ??         0:00.01 /System/Library/CoreServices/ReportCrash agent
+  235  7389     1   0 11Jul19 ??         0:07.39 /System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/XPCServices/AssetCacheLocatorService.xpc/Contents/MacOS/AssetCacheLocatorService -d
+    0  7575     1   0 11Jul19 ??         1:20.63 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/system_installd
+    0  7853     1   0 11Jul19 ??         0:00.93 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/SpeechSynthesis.framework/Resources/com.apple.speech.speechsynthesisd
+    0  7854     1   0 11Jul19 ??         0:00.01 /System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.SandboxHelper.xpc/Contents/MacOS/com.apple.audio.SandboxHelper
+  501  8229     1   0 11Jul19 ??         2:10.99 /Applications/Messages.app/Contents/MacOS/Messages
+  501  8231     1   0 11Jul19 ??         0:01.03 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501  9012     1   0 11Jul19 ??         0:25.14 /System/Library/CoreServices/OSDUIHelper.app/Contents/MacOS/OSDUIHelper
+  501  9013     1   0 11Jul19 ??         0:00.07 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501  9312     1   0 11Jul19 ??         0:00.36 /System/Library/PrivateFrameworks/ToneLibrary.framework/Versions/A/XPCServices/com.apple.tonelibraryd.xpc/Contents/MacOS/com.apple.tonelibraryd
+  501  9315     1   0 11Jul19 ??         0:00.33 /System/Library/Frameworks/MediaAccessibility.framework/Versions/A/XPCServices/com.apple.accessibility.mediaaccessibilityd.xpc/Contents/MacOS/com.apple.accessibility.mediaaccessibilityd
+  501  9320     1   0 11Jul19 ??         0:02.01 /System/Library/PrivateFrameworks/CallHistory.framework/Support/CallHistorySyncHelper
+   88  9412     1   0 11Jul19 ??         0:00.29 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+    0  9619     1   0 11Jul19 ??         0:00.01 /usr/libexec/periodic-wrapper weekly
+  257  9646     1   0 11Jul19 ??         0:00.07 /usr/libexec/DataDetectorsSourceAccess
+    0 11915     1   0 13Jul19 ??         0:00.01 /usr/sbin/aslmanager -s /var/log/eventmonitor
+  501 11977     1   0 13Jul19 ??         0:49.28 /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Resources/Java Updater.app/Contents/MacOS/Java Updater -bgcheck
+  501 12063   451   0 13Jul19 ??         6:46.46 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=18094098443901127332 --renderer-client-id=3740 --no-v8-untrusted-code-mitigations --seatbelt-client=133
+  501 12981   451   0 15Jul19 ??        20:31.74 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=10816817944330895880 --renderer-client-id=3939 --no-v8-untrusted-code-mitigations --seatbelt-client=171
+  501 14025     1   0 15Jul19 ??         0:00.25 /Applications/Slack.app/Contents/Frameworks/Squirrel.framework/Resources/ShipIt com.tinyspeck.slackmacgap.ShipIt /Users/matthew.mangia/Library/Caches/com.tinyspeck.slackmacgap.ShipIt/ShipItState.plist
+    0 16148     1   0 16Jul19 ??         0:02.62 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/installd
+  501 16264     1   0 16Jul19 ??         3:11.75 /Applications/Pulse Secure.app/Contents/Plugins/JamUI/PulseTray.app/Contents/MacOS/PulseTray
+    0 16506     1   0 16Jul19 ??         0:02.76 /System/Library/CoreServices/ReportCrash daemon
+    0 16811     1   0 16Jul19 ??         8:56.79 /Applications/Pulse Secure.app/Contents/Plugins/JUNS/dsAccessService
+  501 16812     1   0 16Jul19 ??         0:00.31 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+    0 16813 16811   0 16Jul19 ??         0:01.98 /Applications/Pulse Secure.app/Contents/Plugins/JUNS/dsAccessService -host HostCheckerService
+  501 16823     1   0 16Jul19 ??         0:00.91 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/installd
+  501 16923     1   0 16Jul19 ??         0:24.18 /Users/matthew.mangia/Library/Application Support/Pulse Secure/SetupClient/PulseSetupClient.app/Contents/MacOS/PulseSetupClient
+  501 17320     1   0 16Jul19 ??         0:00.05 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  600 19344     1   0 16Jul19 ??         0:01.43 /usr/sbin/distnoted agent
+  501 20569     1   0 16Jul19 ??         0:00.01 /System/Library/PrivateFrameworks/KerberosHelper/Helpers/DiskUnmountWatcher
+  501 21127   451   0 17Jul19 ??         1:51.29 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=18096584643489354735 --renderer-client-id=5333 --no-v8-untrusted-code-mitigations --seatbelt-client=105
+  501 21583   451   0 17Jul19 ??       138:40.48 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=7820892320628486353 --renderer-client-id=5623 --no-v8-untrusted-code-mitigations --seatbelt-client=105
+  501 23529     1   0 17Jul19 ??         0:41.66 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService
+  501 23531     1   0 17Jul19 ??         0:00.19 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501 41897     1   0 18Jul19 ??         0:00.33 /System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.History.xpc/Contents/MacOS/com.apple.Safari.History
+  501 41904     1   0 18Jul19 ??         1:35.13 /System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/com.apple.Safari.SafeBrowsing.Service
+    0 42236     1   0 18Jul19 ??         0:00.01 /usr/libexec/periodic-wrapper monthly
+  501 43456   451   0 18Jul19 ??         0:03.38 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=18197420421581110344 --renderer-client-id=6824 --no-v8-untrusted-code-mitigations --seatbelt-client=216
+  213 43512     1   0 18Jul19 ??         0:01.68 /System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/Resources/usbmuxd -launchd
+  501 44657     1   0 19Jul19 ??        23:30.43 /Applications/Utilities/Activity Monitor.app/Contents/MacOS/Activity Monitor
+  501 45056     1   0 19Jul19 ??         0:09.73 /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app/Contents/MacOS/iTunesHelper --launchd
+  501 45057     1   0 19Jul19 ??         0:13.00 /System/Library/PrivateFrameworks/MobileDevice.framework/Resources/MobileDeviceUpdater.app/Contents/MacOS/MobileDeviceUpdater
+  265 45069     1   0 19Jul19 ??         0:02.43 /System/Library/PrivateFrameworks/CoreFP.framework/Versions/A/fpsd
+  501 45070     1   0 19Jul19 ??         0:00.58 /System/Library/PrivateFrameworks/BookKit.framework/Versions/A/XPCServices/com.apple.BKAgentService.xpc/Contents/MacOS/com.apple.BKAgentService
+  501 45175     1   0 19Jul19 ??         0:01.08 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  501 45194     1   0 19Jul19 ??         0:01.16 /System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+  501 45873     1   0 20Jul19 ??         3:29.90 /usr/bin/java -Xmx512M -Xms512M -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dkafka.logs.dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.Cf1qD9ip/zookeeper/logs -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/kafka/log4j.properties -cp /Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/kafka/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-metadata-service/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/libs/*:/usr/share/java/support-metrics-client/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/libs/*:/usr/share/java/support-metrics-fullcollector/* org.apache.zookeeper.server.quorum.QuorumPeerMain /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.Cf1qD9ip/zookeeper/zookeeper.properties
+    0 46448     1   0 22Jul19 ??         0:00.48 /usr/libexec/tzd
+  501 47009     1   0 22Jul19 ??         0:00.07 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501 47135   451   0 22Jul19 ??         2:04.93 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=5120395179637607899 --renderer-client-id=7621 --no-v8-untrusted-code-mitigations --seatbelt-client=179
+    0 48606     1   0 Tue08AM ??         0:04.40 /usr/libexec/syspolicyd
+  501 48802     1   0 Tue10AM ??         2:14.17 /Applications/Sublime Text.app/Contents/MacOS/Sublime Text -psn_0_3625845
+  501 48805 48802   0 Tue10AM ??         0:01.22 /Applications/Sublime Text.app/Contents/MacOS/plugin_host 48802 --auto-shell-env
+  501 49166   451   0 Tue01PM ??         2:58.84 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=803166449279109413 --renderer-client-id=8540 --no-v8-untrusted-code-mitigations --seatbelt-client=163
+  501 49689   451   0 Tue07PM ??        10:19.94 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=5405591701215433509 --renderer-client-id=8779 --no-v8-untrusted-code-mitigations --seatbelt-client=170
+  501 49692     1   0 Tue07PM ??         7:33.07 /Applications/Microsoft Remote Desktop.app/Contents/MacOS/Microsoft Remote Desktop
+  501 49746     1   0 Tue07PM ??         0:15.27 /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService
+  501 49749     1   0 Tue07PM ??         0:00.23 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501 49762   451   0 Tue07PM ??         0:48.27 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=3279986578219760957 --renderer-client-id=8822 --no-v8-untrusted-code-mitigations --seatbelt-client=177
+  501 49763   451   0 Tue07PM ??         0:44.16 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=7835574706972300539 --renderer-client-id=8823 --no-v8-untrusted-code-mitigations --seatbelt-client=177
+  501 49764   451   0 Tue07PM ??         0:02.17 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=7978900618445542218 --renderer-client-id=8824 --no-v8-untrusted-code-mitigations --seatbelt-client=177
+  501 49765   451   0 Tue07PM ??         0:02.26 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=2668133452546700170 --renderer-client-id=8825 --no-v8-untrusted-code-mitigations --seatbelt-client=177
+    0 49863     1   0 Tue08PM ??         0:00.02 /System/Library/PrivateFrameworks/SystemAdministration.framework/XPCServices/writeconfig.xpc/Contents/MacOS/writeconfig
+  501 49879     1   0 Tue08PM ??         0:00.23 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501 51733   451   0 Thu08AM ??         0:44.82 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=16374379874294399994 --renderer-client-id=9683 --no-v8-untrusted-code-mitigations --seatbelt-client=53
+  501 52037   451   0 Thu12PM ??         0:23.35 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=14873782215889554308 --renderer-client-id=9857 --no-v8-untrusted-code-mitigations --seatbelt-client=109
+  501 52068   451   0 Thu12PM ??         0:06.07 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=509294225998734895 --renderer-client-id=9874 --no-v8-untrusted-code-mitigations --seatbelt-client=191
+  501 52069   451   0 Thu12PM ??         0:01.23 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=14686281158978734909 --renderer-client-id=9875 --no-v8-untrusted-code-mitigations --seatbelt-client=191
+  501 52307     1   0 Thu02PM ??         0:00.08 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501 52369   451   0 Thu03PM ??         0:06.79 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=9786415008890414163 --renderer-client-id=10084 --no-v8-untrusted-code-mitigations --seatbelt-client=197
+  501 52665     1   0 Thu03PM ??         0:00.09 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501 52678     1   0 Thu03PM ??         0:27.40 /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell -psn_0_4342820
+  501 52705   451   0 Thu03PM ??         0:33.04 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=5612912668296805901 --renderer-client-id=10129 --no-v8-untrusted-code-mitigations --seatbelt-client=192
+  501 52706   451   0 Thu03PM ??         0:01.17 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=17562086748136364206 --renderer-client-id=10130 --no-v8-untrusted-code-mitigations --seatbelt-client=192
+  501 52967     1   0 Thu06PM ??         0:00.01 /System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.SandboxHelper.xpc/Contents/MacOS/com.apple.audio.SandboxHelper
+  501 53230   458   0 Fri07AM ??        16:30.60 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper --type=renderer --autoplay-policy=no-user-gesture-required --force-color-profile=srgb --enable-features=SharedArrayBuffer --disable-features=MacV2Sandbox --service-pipe-token=973209673600831148 --lang=en-US --standard-schemes=slack-resources,slack-sounds,slack-webapp-dev --secure-schemes=slack-resources,slack-sounds,slack-webapp-dev --app-path=/Applications/Slack.app/Contents/Resources/app.asar --user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Slack/3.4.2 Chrome/69.0.3497.128 Electron/4.2.1 Safari/537.36 --enable-experimental-web-platform-features --node-integration=false --webview-tag=false --no-sandbox --preload=/Applications/Slack.app/Contents/Resources/app.asar/src/static/ssb-interop.js --background-color=#fff --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=973209673600831148 --renderer-client-id=33 {"loadSettings":{"chromeDriver":false,"devEnv":null,"devMode":false,"invokedOnStartup":false,"logFile":null,"resourcePath":"/Applications/Slack.app/Contents/Resources/app.asar","rxLogging":false,"version":"3.4.2","webappSrcPath":false,"sessionId":"ZTYxZTZjMDMtOGU0YS01NzdlLTlmYzgtYjg1Y2NhOWJkOGYyXzE1NjI2OTg3NDk5NDQ=","appVersion":"3.4.2","isAeroGlassEnabled":false,"isDevMode":false,"isGpuCompositionAvailable":true,"isTitleBarHidden":false,"launchOnStartup":false,"openDevToolsOnStart":false,"platformVersion":{"major":18,"minor":6,"build":0},"pretendNotReallyWindows10":false,"releaseChannel":"prod","versionName":"Eye of the Tiger","webappParams":null,"windowType":"webapp","subType":"T038ZHM0B-preload"},"crashReporterOpts":{"productName":"Slack","companyName":"Slack Technologies","uploadToServer":true,"submitURL":"https://slack.com/apps/breakpad?instanceUid=e61e6c03-8e4a-577e-9fc8-b85cca9bd8f2","extra":{"instanceUid":"e61e6c03-8e4a-577e-9fc8-b85cca9bd8f2","sessionId":"ZTYxZTZjMDMtOGU0YS01NzdlLTlmYzgtYjg1Y2NhOWJkOGYyXzE1NjI2OTg3NDk5NDQ="}},"perfTimer":{"mainPid":458,"BOOT":[22,204886790],"numTeamsAtLaunch":1,"SHELL":[22,447848386],"APP_READY":[24,752413450],"MAIN_WINDOW_CREATING":[25,311205754],"MAIN_WINDOW_CREATED":[25,340191668]},"identifier":"slack_preload_metadata_arguments","teamId":"T038ZHM0B"}
+  501 53278   451   0 Fri07AM ??         0:31.81 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=3211404538701802622 --renderer-client-id=10335 --no-v8-untrusted-code-mitigations --seatbelt-client=169
+  501 53279   451   0 Fri07AM ??         0:00.84 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=12577925133132902607 --renderer-client-id=10336 --no-v8-untrusted-code-mitigations --seatbelt-client=169
+  501 53280   451   0 Fri07AM ??         0:00.86 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=8019015475013761455 --renderer-client-id=10337 --no-v8-untrusted-code-mitigations --seatbelt-client=169
+  501 53281   451   0 Fri07AM ??         0:45.90 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=2707876534246284159 --renderer-client-id=10338 --no-v8-untrusted-code-mitigations --seatbelt-client=169
+  501 53290   451   0 Fri07AM ??         0:06.08 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=3724040490838699844 --renderer-client-id=10347 --no-v8-untrusted-code-mitigations --seatbelt-client=169
+  501 53291   451   0 Fri07AM ??         0:14.59 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=4315286775064661798 --renderer-client-id=10348 --no-v8-untrusted-code-mitigations --seatbelt-client=169
+  501 53304   451   0 Fri07AM ??         1:17.48 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=10675943629639554807 --renderer-client-id=10356 --no-v8-untrusted-code-mitigations --seatbelt-client=222
+  501 53315   451   0 Fri07AM ??         0:09.17 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=12732685882220245475 --renderer-client-id=10363 --no-v8-untrusted-code-mitigations --seatbelt-client=184
+  501 53316   451   0 Fri07AM ??         0:00.94 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=1851950053902420494 --renderer-client-id=10364 --no-v8-untrusted-code-mitigations --seatbelt-client=197
+  501 53518   451   0 Fri09AM ??         1:10.12 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=4390555172107401076 --renderer-client-id=10465 --no-v8-untrusted-code-mitigations --seatbelt-client=170
+  501 53954   451   0 Fri03PM ??         3:03.29 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=2017133045689440450 --renderer-client-id=10591 --no-v8-untrusted-code-mitigations --seatbelt-client=105
+  501 54015   451   0 Fri05PM ??         0:14.12 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=6379631343806360892 --renderer-client-id=10616 --no-v8-untrusted-code-mitigations --seatbelt-client=202
+  501 54093   451   0 Fri06PM ??         0:05.69 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=9982252016498439887 --renderer-client-id=10630 --no-v8-untrusted-code-mitigations --seatbelt-client=105
+  501 54359   451   0 Fri07PM ??         0:19.95 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=7275461487991218620 --renderer-client-id=10652 --no-v8-untrusted-code-mitigations --seatbelt-client=169
+   89 55733     1   0 Sun06AM ??         0:01.38 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+    0 55811     1   0 Sun07AM ??         0:07.50 /usr/libexec/PerfPowerServices
+   89 55815     1   0 Sun07AM ??         0:01.45 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+   89 55825     1   0 Sun08AM ??         0:01.48 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+   89 55856     1   0 Sun09AM ??         0:01.08 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 55914     1   0  3:42PM ??         0:00.07 /System/Library/PrivateFrameworks/CloudDocs.framework/PlugIns/com.apple.CloudDocs.MobileDocumentsFileProvider.appex/Contents/MacOS/com.apple.CloudDocs.MobileDocumentsFileProvider
+  501 55916     1   0  3:42PM ??         2:42.45 /Applications/Preview.app/Contents/MacOS/Preview -psn_0_5084377
+    0 56009     1   0  5:20PM ??         0:00.01 /usr/libexec/tzlinkd
+    0 56146     1   0  8:47AM ??         0:00.02 /usr/libexec/applessdstatistics
+    0 56149     1   0  8:48AM ??         0:02.27 /usr/libexec/sandboxd
+  501 56329   451   0  9:02AM ??         2:36.31 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=2755051894436880402 --renderer-client-id=10802 --no-v8-untrusted-code-mitigations --seatbelt-client=150
+  501 56364   451   0  9:04AM ??         3:33.03 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=16963259330607975861 --renderer-client-id=10812 --no-v8-untrusted-code-mitigations --seatbelt-client=197
+  501 57139   451   0  9:39AM ??         1:03.14 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=13053828989730338345 --renderer-client-id=10844 --no-v8-untrusted-code-mitigations --seatbelt-client=217
+  501 57149   451   0  9:40AM ??         0:18.61 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=6514666692386415306 --renderer-client-id=10845 --no-v8-untrusted-code-mitigations --seatbelt-client=217
+  501 57175   451   0  9:40AM ??         1:00.42 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=6046451770757249364 --renderer-client-id=10850 --no-v8-untrusted-code-mitigations --seatbelt-client=227
+  501 57392   451   0  9:51AM ??         0:02.19 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=9956734640998322610 --renderer-client-id=10856 --no-v8-untrusted-code-mitigations --seatbelt-client=105
+  501 57397   451   0  9:51AM ??         0:13.08 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=6673457320342038184 --renderer-client-id=10861 --no-v8-untrusted-code-mitigations --seatbelt-client=167
+  501 57405     1   0  9:54AM ??         0:00.10 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501 57407     1   0  9:54AM ??         0:00.17 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501 57431   451   0 10:08AM ??         1:31.11 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=5026653371231148678 --renderer-client-id=10871 --no-v8-untrusted-code-mitigations --seatbelt-client=172
+  501 57484   451   0 10:34AM ??         1:16.42 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --extension-process --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=10348636862766485740 --renderer-client-id=10888 --no-v8-untrusted-code-mitigations --seatbelt-client=204
+  501 57567     1   0 10:58AM ??         5:58.74 /Applications/IntelliJ IDEA.app/Contents/MacOS/idea
+  501 57572 57567   0 10:58AM ??         0:00.38 /Applications/IntelliJ IDEA.app/Contents/bin/fsnotifier
+  501 57588     1   0 10:59AM ??         0:00.13 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57589     1   0 10:59AM ??         0:03.40 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57590     1   0 10:59AM ??         0:03.79 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57591     1   0 10:59AM ??         0:04.50 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57592     1   0 10:59AM ??         0:02.97 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57705     1   0 11:27AM ??         0:00.21 /System/Library/PrivateFrameworks/AOSKit.framework/Versions/A/XPCServices/com.apple.iCloudHelper.xpc/Contents/MacOS/com.apple.iCloudHelper
+  501 57706     1   0 11:27AM ??         0:00.20 /System/Library/CoreServices/CoreServicesUIAgent.app/Contents/MacOS/CoreServicesUIAgent
+  222 57759     1   0 12:37PM ??         0:00.04 /usr/sbin/netbiosd
+  501 57761     1   0 12:37PM ??         0:00.13 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57762     1   0 12:37PM ??         0:00.08 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57763     1   0 12:37PM ??         0:00.08 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57764     1   0 12:37PM ??         0:00.08 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57765     1   0 12:37PM ??         0:00.07 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57768     1   0 12:37PM ??         0:00.32 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57769     1   0 12:37PM ??         0:00.16 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57770     1   0 12:37PM ??         0:00.15 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57771     1   0 12:37PM ??         0:00.15 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57774     1   0 12:37PM ??         0:00.12 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57838     1   0 12:43PM ??         0:00.03 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+  501 57969     1   0 12:45PM ??         0:00.07 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+  501 57974   451   0 12:46PM ??         0:05.95 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=3608162589845400159 --renderer-client-id=10949 --no-v8-untrusted-code-mitigations --seatbelt-client=184
+  501 57978   451   0 12:47PM ??         0:19.79 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=16722675607126042219 --renderer-client-id=10953 --no-v8-untrusted-code-mitigations --seatbelt-client=175
+  501 57982   451   0 12:47PM ??         0:00.09 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/75.0.3770.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper --type=renderer --field-trial-handle=1718379636,12781909488952479971,2544166245638032455,131072 --lang=en-US --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --service-request-channel-token=6629776605816409470 --renderer-client-id=10957 --no-v8-untrusted-code-mitigations --seatbelt-client=175
+   89 57983     1   0 12:48PM ??         0:00.05 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+    0 57985     1   0 12:51PM ??         0:00.01 /usr/sbin/ocspd
+    0   565   450   0  9Jul19 ttys000    0:00.02 login -pf matthew.mangia
+  501   567   565   0  9Jul19 ttys000    0:00.01 -bash
+    0   581   450   0  9Jul19 ttys001    0:00.02 login -pfl matthew.mangia /bin/bash -c exec -la bash /bin/bash
+  501   582   581   0  9Jul19 ttys001    0:00.01 -bash
+    0  7072   450   0 10Jul19 ttys002    0:00.03 login -pf matthew.mangia
+  501  7073  7072   0 10Jul19 ttys002    0:00.04 -bash
+    0 49865   450   0 Tue08PM ttys003    0:00.05 login -pfl matthew.mangia /bin/bash -c exec -la bash /bin/bash
+  501 49866 49865   0 Tue08PM ttys003    0:00.16 -bash
+    0 57986 49866   0 12:51PM ttys003    0:00.00 ps -ef
+    0 57488   450   0 10:35AM ttys004    0:00.05 login -pfl matthew.mangia /bin/bash -c exec -la bash /bin/bash
+  501 57489 57488   0 10:35AM ttys004    0:00.23 -bash
+    0 14408   450   0 15Jul19 ttys006    0:00.04 login -pfl matthew.mangia /bin/bash -c exec -la bash /bin/bash
+  501 14409 14408   0 15Jul19 ttys006    0:00.08 -bash
+Matthew-Mangias-MBP15:bin matthew.mangia$ ps -ef | grep kafka
+  501 45873     1   0 20Jul19 ??         3:29.91 /usr/bin/java -Xmx512M -Xms512M -server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dkafka.logs.dir=/var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.Cf1qD9ip/zookeeper/logs -Dlog4j.configuration=file:/Users/matthew.mangia/confluent-5.3.0/bin/../etc/kafka/log4j.properties -cp /Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-broker-plugins/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../ce-auth-providers/build/dependant-libs/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/kafka/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-metadata-service/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/rest-utils/*:/Users/matthew.mangia/confluent-5.3.0/bin/../share/java/confluent-common/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-client/build/libs/*:/usr/share/java/support-metrics-client/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/dependant-libs-2.12.8/*:/Users/matthew.mangia/confluent-5.3.0/bin/../support-metrics-fullcollector/build/libs/*:/usr/share/java/support-metrics-fullcollector/* org.apache.zookeeper.server.quorum.QuorumPeerMain /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.Cf1qD9ip/zookeeper/zookeeper.properties
+  501 57988 49866   0 12:51PM ttys003    0:00.00 grep kafka
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./zookeeper-server-stop
+Matthew-Mangias-MBP15:bin matthew.mangia$ ps -ef | grep kafka
+  501 57997 49866   0 12:51PM ttys003    0:00.00 grep kafka
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./confluent local status
+    The local commands are intended for a single-node development environment
+    only, NOT for production usage. https://docs.confluent.io/current/cli/index.html
+
+control-center is [DOWN]
+ksql-server is [DOWN]
+connect is [DOWN]
+kafka-rest is [DOWN]
+schema-registry is [DOWN]
+kafka is [DOWN]
+zookeeper is [DOWN]
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./confluent local start
+    The local commands are intended for a single-node development environment
+    only, NOT for production usage. https://docs.confluent.io/current/cli/index.html
+
+Using CONFLUENT_CURRENT: /var/folders/hq/h0x3zqws7zlf9964v_xh1fzm0000gn/T/confluent.iCTQMbVy
+Starting zookeeper
+zookeeper is [UP]
+Starting kafka
+kafka is [UP]
+Starting schema-registry
+schema-registry is [UP]
+Starting kafka-rest
+kafka-rest is [UP]
+Starting connect
+connect is [UP]
+Starting ksql-server
+ksql-server is [UP]
+Starting control-center
+control-center is [UP]
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-producer --broker-list localhost:9092 --topic test-topic
+>test  
+>messages
+>produced
+>to 
+>my
+>cluster
+>new
+>thing
+>on
+>the
+>screen
+>The local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development environmentThe local commands are intended for a single-node development envir        
+>^CMatthew-Mangias-MBP15:bin matthew.mangia$ less ../etc/
+confluent-common/             kafka/                        kafka-connect-storage-common/
+confluent-control-center/     kafka-connect-activemq/       kafka-rest/
+confluent-control-center-fe/  kafka-connect-elasticsearch/  ksql/
+confluent-hub-client/         kafka-connect-ibmmq/          rest-utils/
+confluent-kafka-mqtt/         kafka-connect-jdbc/           schema-registry/
+confluent-metadata-service/   kafka-connect-jms/            secrets/
+confluent-rebalancer/         kafka-connect-replicator/     
+confluent-security/           kafka-connect-s3/             
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-producer --broker-list localhost:9092 --topic test-topic
+>^CMatthew-Mangias-MBP15:bin matthew.mangiclear
+
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-producer --broker-list localhost:9092 --topic proc-start-topic
+>test
+>proc
+>start
+>test
+>1,message
+>test, message
+>^CMatthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-producer --broker-list localhost:9092 --topic ioc-topic
+>1, think
+[2019-07-29 13:38:02,782] WARN [Producer clientId=console-producer] Error while fetching metadata with correlation id 3 : {proioc-topic=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+>^C^CMatthew-Mangias-MBP15:bin matthew.mangia$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-producer --broker-list localhost:9092 --topic ioc-topic
+>1, test
+>2, test
+>3, test
+>2, testing message
+>3, newerTest
+>5, newValue
+>4, testValue
+>5, testing
+>1, more
+>2
+>2, data
+>3, topickeyets
+>5, newtest
+>4, come on
+>1, newvaluefor1
+>^CMatthew-Mangias-MBP15:bin matthew.mangia$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-producer --broker-list localhost:9092 --topic ioc-topic
+>10, some 
+>11, values
+>12, to 
+>13, match
+>10, updatedsomething
+>20, newmessage
+>21, tryagain
+>23, newtest
+>^CMatthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

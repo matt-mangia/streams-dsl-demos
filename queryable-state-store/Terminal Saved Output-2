@@ -1,0 +1,323 @@
+Last login: Mon Jul 29 15:40:25 on ttys006
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/instances
+[{"host":"localhost","port":7070,"storeNames":["threat-store"]}]Matthew-Mangias-MBP15:queryable-state-store matthee
+[{"host":"localhost","port":7070,"storeNames":["threat-store"]}]Matthew-Mangias-MBP15:queryable-state-store matthee
+[{"host":"localhost","port":7070,"storeNames":["threat-store"]}]Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ 
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ 
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ 
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/instances/threat-store/all
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/instances/threat-store/all. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/instances/threat-store/
+[{"host":"localhost","port":7070,"storeNames":["threat-store
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ 
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/instances/threat-store/all
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/instances/threat-store/all. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/instances/threat-store/4
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/instances/threat-store/4. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store/all
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 500 Request failed.</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /state/keyvalues/threat-store/all. Reason:
+<pre>    Request failed.</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalues/threat-store. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store/5
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalues/threat-store/5. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store/4
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalues/threat-store/4. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store/3
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalues/threat-store/3. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store/all
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 500 Request failed.</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /state/keyvalues/threat-store/all. Reason:
+<pre>    Request failed.</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalue/threat-store/all
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalue/threat-store/all. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalue/threat-store/4
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 500 Request failed.</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /state/keyvalue/threat-store/4. Reason:
+<pre>    Request failed.</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalue/threat-store/5
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 500 Request failed.</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /state/keyvalue/threat-store/5. Reason:
+<pre>    Request failed.</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalue/threat-store/3
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 500 Request failed.</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /state/keyvalue/threat-store/3. Reason:
+<pre>    Request failed.</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalue/threat-store/all
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalue/threat-store/all. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store/all
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 500 Request failed.</title>
+</head>
+<body><h2>HTTP ERROR 500</h2>
+<p>Problem accessing /state/keyvalues/threat-store/all. Reason:
+<pre>    Request failed.</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalue/threat-store/all
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalue/threat-store/all. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalue/threat-store/all
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalue/threat-store/all. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/instances
+[{"host":"localhost","port":7070,"storeNames":["threat-store"]}]Matthew-Mangias-MBP15:queryable-state-store matthee
+<html>a$ curl http://localhost:7070/state/keyvalues/threat-store 
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalues/threat-store. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 Not Found</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /state/keyvalues/threat-store. Reason:
+<pre>    Not Found</pre></p><hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+</body>
+</html>
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store/all
+[{"key":"1","value":"1, more"},{"key":"2","value":"2, data"},{"key":"3","value":"3, topickeyets"},{"key":"4","value":"4, come on"},{"key":"5","value":"5, newtest"}]Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl h/all//localhost:7070/state/keyvalues/threat-store/
+[{"key":"1","value":"1, newvaluefor1"},{"key":"2","value":"2, data"},{"key":"3","value":"3, topickeyets"},{"key":"4","value":"4, come on"},{"key":"5","value":"5, newtest"}]Matthew-Mangias-MBP15:queryable-state-store matthew.mangia/all;2Chttp://localhost:7070/state/keyvalues/threat-store/
+[{"key":"1","value":"1, newvaluefor1"},{"key":"2","value":"2, data"},{"key":"3","value":"3, topickeyets"},{"key":"4","value":"4, come on"},{"key":"5","value":"5, newtest"}]-bash: 2C: command not found
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store/all;
+[{"key":"1","value":"1, newvaluefor1"},{"key":"2","value":"2, data"},{"key":"3","value":"3, topickeyets"},{"key":"4","value":"4, come on"},{"key":"5","value":"5, newtest"}]Matthew-Mangias-MBP15:queryable-state-store matthew.mangia/all;l http://localhost:7070/state/keyvalues/threat-store/
+[{"key":"1","value":"1, newvaluefor1"},{"key":"2","value":"2, data"},{"key":"3","value":"3, topickeyets"},{"key":"4","value":"4, come on"},{"key":"5","value":"5, newtest"}]Matthew-Mangias-MBP15:queryable-state-store matthew.mangia/all;l http://localhost:7070/state/keyvalues/threat-store/
+[{"key":"1","value":"1, newvaluefor1"},{"key":"2","value":"2, data"},{"key":"3","value":"3, topickeyets"},{"key":"4","value":"4, come on"},{"key":"5","value":"5, newtest"}]Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ clear
+
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/instances;
+[{"host":"localhost","port":7070,"storeNames":["threat-store"]}]Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ 
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ 
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ curl http://localhost:7070/state/keyvalues/threat-store/all;
+[{"key":"1","value":"1, newvaluefor1"},{"key":"10","value":"10, updatedsomething"},{"key":"11","value":"11, values"},{"key":"12","value":"12, to"},{"key":"13","value":"13, match"},{"key":"2","value":"2, data"},{"key":"20","value":"20, newmessage"},{"key":"21","value":"21, tryagain"},{"key":"23","value":"23, newtest"},{"key":"3","value":"3, topickeyets"},{"key":"4","value":"4, come on"},{"key":"5","value":"5, newtest"}]Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Matthew-Mangias-MBP15:queryable-state-store matthew.mangia$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

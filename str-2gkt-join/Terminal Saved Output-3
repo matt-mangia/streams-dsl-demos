@@ -1,0 +1,219 @@
+Last login: Mon Jul 29 15:04:07 on ttys008
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-topics --zookeeper localhost:2181 --list
+__confluent.support.metrics
+__consumer_offsets
+_confluent-command
+_confluent-controlcenter-5-3-0-1-AlertHistoryStore-changelog
+_confluent-controlcenter-5-3-0-1-Group-ONE_MINUTE-changelog
+_confluent-controlcenter-5-3-0-1-Group-THREE_HOURS-changelog
+_confluent-controlcenter-5-3-0-1-KSTREAM-OUTEROTHER-0000000105-store-changelog
+_confluent-controlcenter-5-3-0-1-KSTREAM-OUTERTHIS-0000000104-store-changelog
+_confluent-controlcenter-5-3-0-1-MetricsAggregateStore-changelog
+_confluent-controlcenter-5-3-0-1-MetricsAggregateStore-repartition
+_confluent-controlcenter-5-3-0-1-MonitoringMessageAggregatorWindows-ONE_MINUTE-changelog
+_confluent-controlcenter-5-3-0-1-MonitoringMessageAggregatorWindows-ONE_MINUTE-repartition
+_confluent-controlcenter-5-3-0-1-MonitoringMessageAggregatorWindows-THREE_HOURS-changelog
+_confluent-controlcenter-5-3-0-1-MonitoringMessageAggregatorWindows-THREE_HOURS-repartition
+_confluent-controlcenter-5-3-0-1-MonitoringStream-ONE_MINUTE-changelog
+_confluent-controlcenter-5-3-0-1-MonitoringStream-ONE_MINUTE-repartition
+_confluent-controlcenter-5-3-0-1-MonitoringStream-THREE_HOURS-changelog
+_confluent-controlcenter-5-3-0-1-MonitoringStream-THREE_HOURS-repartition
+_confluent-controlcenter-5-3-0-1-MonitoringTriggerStore-changelog
+_confluent-controlcenter-5-3-0-1-MonitoringVerifierStore-changelog
+_confluent-controlcenter-5-3-0-1-TriggerActionsStore-changelog
+_confluent-controlcenter-5-3-0-1-TriggerEventsStore-changelog
+_confluent-controlcenter-5-3-0-1-actual-group-consumption-rekey
+_confluent-controlcenter-5-3-0-1-aggregate-topic-partition-store-changelog
+_confluent-controlcenter-5-3-0-1-aggregatedTopicPartitionTableWindows-ONE_MINUTE-changelog
+_confluent-controlcenter-5-3-0-1-aggregatedTopicPartitionTableWindows-ONE_MINUTE-repartition
+_confluent-controlcenter-5-3-0-1-aggregatedTopicPartitionTableWindows-THREE_HOURS-changelog
+_confluent-controlcenter-5-3-0-1-aggregatedTopicPartitionTableWindows-THREE_HOURS-repartition
+_confluent-controlcenter-5-3-0-1-cluster-rekey
+_confluent-controlcenter-5-3-0-1-expected-group-consumption-rekey
+_confluent-controlcenter-5-3-0-1-group-aggregate-store-ONE_MINUTE-changelog
+_confluent-controlcenter-5-3-0-1-group-aggregate-store-THREE_HOURS-changelog
+_confluent-controlcenter-5-3-0-1-group-stream-extension-rekey
+_confluent-controlcenter-5-3-0-1-metrics-trigger-measurement-rekey
+_confluent-controlcenter-5-3-0-1-monitoring-aggregate-rekey-store-changelog
+_confluent-controlcenter-5-3-0-1-monitoring-message-rekey-store
+_confluent-controlcenter-5-3-0-1-monitoring-trigger-event-rekey
+_confluent-ksql-default__command_topic
+_confluent-metrics
+_confluent-monitoring
+_schemas
+connect-configs
+connect-offsets
+connect-statuses
+default_ksql_processing_log
+ioc-topic
+ioc-topic-keyed
+ktable-joined-topic
+proc-start-topic
+proioc-topic
+test-topic
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic ktable-joined-topic
+^CProcessed a total of 0 messages
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic ktable-joined-topic --from-begining
+from-begining is not a recognized option
+Option                                   Description                            
+------                                   -----------                            
+--bootstrap-server <String: server to    REQUIRED: The server(s) to connect to. 
+  connect to>                                                                   
+--consumer-property <String:             A mechanism to pass user-defined       
+  consumer_prop>                           properties in the form key=value to  
+                                           the consumer.                        
+--consumer.config <String: config file>  Consumer config properties file. Note  
+                                           that [consumer-property] takes       
+                                           precedence over this config.         
+--enable-systest-events                  Log lifecycle events of the consumer   
+                                           in addition to logging consumed      
+                                           messages. (This is specific for      
+                                           system tests.)                       
+--formatter <String: class>              The name of a class to use for         
+                                           formatting kafka messages for        
+                                           display. (default: kafka.tools.      
+                                           DefaultMessageFormatter)             
+--from-beginning                         If the consumer does not already have  
+                                           an established offset to consume     
+                                           from, start with the earliest        
+                                           message present in the log rather    
+                                           than the latest message.             
+--group <String: consumer group id>      The consumer group id of the consumer. 
+--help                                   Print usage information.               
+--isolation-level <String>               Set to read_committed in order to      
+                                           filter out transactional messages    
+                                           which are not committed. Set to      
+                                           read_uncommittedto read all          
+                                           messages. (default: read_uncommitted)
+--key-deserializer <String:                                                     
+  deserializer for key>                                                         
+--max-messages <Integer: num_messages>   The maximum number of messages to      
+                                           consume before exiting. If not set,  
+                                           consumption is continual.            
+--offset <String: consume offset>        The offset id to consume from (a non-  
+                                           negative number), or 'earliest'      
+                                           which means from beginning, or       
+                                           'latest' which means from end        
+                                           (default: latest)                    
+--partition <Integer: partition>         The partition to consume from.         
+                                           Consumption starts from the end of   
+                                           the partition unless '--offset' is   
+                                           specified.                           
+--property <String: prop>                The properties to initialize the       
+                                           message formatter. Default           
+                                           properties include:                  
+                                         	print.timestamp=true|false            
+                                         	print.key=true|false                  
+                                         	print.value=true|false                
+                                         	key.separator=<key.separator>         
+                                         	line.separator=<line.separator>       
+                                         	key.deserializer=<key.deserializer>   
+                                         	value.deserializer=<value.            
+                                           deserializer>                        
+                                         Users can also pass in customized      
+                                           properties for their formatter; more 
+                                           specifically, users can pass in      
+                                           properties keyed with 'key.          
+                                           deserializer.' and 'value.           
+                                           deserializer.' prefixes to configure 
+                                           their deserializers.                 
+--skip-message-on-error                  If there is an error when processing a 
+                                           message, skip it instead of halt.    
+--timeout-ms <Integer: timeout_ms>       If specified, exit if no message is    
+                                           available for consumption for the    
+                                           specified interval.                  
+--topic <String: topic>                  The topic id to consume on.            
+--value-deserializer <String:                                                   
+  deserializer for values>                                                      
+--version                                Display Kafka version.                 
+--whitelist <String: whitelist>          Regular expression specifying          
+                                           whitelist of topics to include for   
+                                           consumption.                         
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic ktable-joined-topic --from-beginning
+left=1,message, right=1, test
+left=2, leftside, right=2, testing message
+left=2, right=2, testing message
+left=2, newTest, right=2, testing message
+left=3, todaystest, right=3, newerTest
+left=5, hopefullythisworks, right=5, newValue
+^CProcessed a total of 6 messages
+Matthew-Mangias-MBP15:bin matthew.mangia$ clear
+
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic ktable-joined-topic --from-beginning
+left=1,message, right=1, test
+left=2, leftside, right=2, testing message
+left=2, right=2, testing message
+left=2, newTest, right=2, testing message
+left=3, todaystest, right=3, newerTest
+left=5, hopefullythisworks, right=5, newValue
+left=1,message, right=1, test
+left=2, leftside, right=2, testing message
+left=2, right=2, testing message
+left=2, newTest, right=2, testing message
+left=3, todaystest, right=3, newerTest
+left=5, hopefullythisworks, right=5, newValue
+left=1,message, right=1, test
+left=2, leftside, right=2, testing message
+left=2, right=2, testing message
+left=2, newTest, right=2, testing message
+left=3, todaystest, right=3, newerTest
+left=5, hopefullythisworks, right=5, newValue
+left=1,message, right=1, test
+left=2, leftside, right=2, testing message
+left=2, right=2, testing message
+left=2, newTest, right=2, testing message
+left=3, todaystest, right=3, newerTest
+left=5, hopefullythisworks, right=5, newValue
+left=1,message, right=1, test
+left=2, leftside, right=2, testing message
+left=2, right=2, testing message
+left=2, newTest, right=2, testing message
+left=3, todaystest, right=3, newerTest
+left=5, hopefullythisworks, right=5, newValue
+left=1,message, right=1, test
+left=2, leftside, right=2, testing message
+left=2, right=2, testing message
+left=2, newTest, right=2, testing message
+left=3, todaystest, right=3, newerTest
+left=5, hopefullythisworks, right=5, newValue
+^CProcessed a total of 36 messages
+Matthew-Mangias-MBP15:bin matthew.mangia$ clear
+
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+Matthew-Mangias-MBP15:bin matthew.mangia$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic ktable-joined-topic
+left=10, something, right=10, some
+left=13, should see match, right=13, match
+left=10, newten, right=10, updatedsomething
+left=20, two entries, right=20, newmessage
+left=21, whyno2entries, right=21, tryagain
+left=21, shouldwork, right=21, tryagain
+left=21, nowtest, right=21, tryagain
+left=23, tests, right=23, newtest
+left=21, shouldbedouble, right=21, tryagain
+left=23, two?, right=23, newtest
+left=20, why no :, right=20, newmessage
+left=21, should have :, right=21, tryagain
+left:21, still work?, right:21, tryagain
+left:21, should have two, right:21, tryagain
+left=21, should have two, right=21, tryagain
+^CProcessed a total of 15 messages
+Matthew-Mangias-MBP15:bin matthew.mangia$ 
+
+
+
+
+
+
+
+
+
+
+

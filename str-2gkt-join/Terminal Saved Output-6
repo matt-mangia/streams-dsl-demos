@@ -1,0 +1,273 @@
+Last login: Mon Jul 29 10:35:47 on ttys004
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ ls
+pom.xml	src	target
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ cd target/
+Matthew-Mangias-MBP15:target matthew.mangia$ ls
+archive-tmp						maven-status
+classes							streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+generated-sources					streams-dsl-demo-matt-1.0.jar
+maven-archiver
+Matthew-Mangias-MBP15:target matthew.mangia$ java -jar streams-dsl-demo-matt-1.0-jar-with-dependencies.jar 
+*** Starting Join Sample Application ***
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^C### Stopping Join Sample Application ###
+Matthew-Mangias-MBP15:target matthew.mangia$ ls
+archive-tmp						maven-status
+classes							streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+generated-sources					streams-dsl-demo-matt-1.0.jar
+maven-archiver
+Matthew-Mangias-MBP15:target matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:join-sample matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ ls
+input.txt		join-sample		str-2gkt-join
+input2.txt		json-dsl-demo		str-gkt-join
+input3.txt		queryable-state-store	topic-rekey
+Matthew-Mangias-MBP15:streams-dsl-demo matthew.mangia$ cd topic-rekey/
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ ls
+pom.xml	src	target
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ maven clean package
+-bash: maven: command not found
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< streams.JoinSample:streams-dsl-demo-matt >--------------
+[INFO] Building streams-dsl-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-dsl-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-dsl-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/topic-rekey/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-dsl-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-dsl-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/streams-dsl-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.695 s
+[INFO] Finished at: 2019-07-30T12:52:47-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ cd target/
+Matthew-Mangias-MBP15:target matthew.mangia$ ls
+archive-tmp						maven-status
+classes							streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+generated-sources					streams-dsl-demo-matt-1.0.jar
+maven-archiver
+Matthew-Mangias-MBP15:target matthew.mangia$ java -jar streams-dsl-demo-matt-1.0-jar-with-dependencies.jar 
+*** Starting TopicRekey Application ***
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Exception in thread "main" org.apache.kafka.streams.errors.TopologyException: Invalid topology: Topic ioc-topic has already been registered by another source.
+	at org.apache.kafka.streams.processor.internals.InternalTopologyBuilder.validateTopicNotAlreadyRegistered(InternalTopologyBuilder.java:585)
+	at org.apache.kafka.streams.processor.internals.InternalTopologyBuilder.addSource(InternalTopologyBuilder.java:385)
+	at org.apache.kafka.streams.kstream.internals.graph.StreamSourceNode.writeToTopology(StreamSourceNode.java:96)
+	at org.apache.kafka.streams.kstream.internals.InternalStreamsBuilder.buildAndOptimizeTopology(InternalStreamsBuilder.java:287)
+	at org.apache.kafka.streams.StreamsBuilder.build(StreamsBuilder.java:533)
+	at org.apache.kafka.streams.StreamsBuilder.build(StreamsBuilder.java:522)
+	at streams.topicRekey.getTopology(topicRekey.java:53)
+	at streams.topicRekey.main(topicRekey.java:30)
+Matthew-Mangias-MBP15:target matthew.mangia$ cd ..
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< streams.JoinSample:streams-dsl-demo-matt >--------------
+[INFO] Building streams-dsl-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-dsl-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-dsl-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/topic-rekey/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-dsl-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-dsl-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/streams-dsl-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.993 s
+[INFO] Finished at: 2019-07-30T12:53:52-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ java -jar streams-dsl-demo-matt-1.0-jar-with-dependencies.jar 
+Error: Unable to access jarfile streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ java -jar target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar 
+*** Starting TopicRekey Application ***
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Exception in thread "live-demo-v0.1.0-a17d4725-4c12-4a01-a04c-92d35c285498-StreamThread-1" java.lang.ArrayIndexOutOfBoundsException: 1
+	at streams.topicRekey.lambda$getTopology$1(topicRekey.java:48)
+	at org.apache.kafka.streams.kstream.internals.KStreamImpl.lambda$internalSelectKey$29(KStreamImpl.java:185)
+	at org.apache.kafka.streams.kstream.internals.KStreamMap$KStreamMapProcessor.process(KStreamMap.java:41)
+	at org.apache.kafka.streams.processor.internals.ProcessorNode.process(ProcessorNode.java:115)
+	at org.apache.kafka.streams.processor.internals.ProcessorContextImpl.forward(ProcessorContextImpl.java:146)
+	at org.apache.kafka.streams.processor.internals.ProcessorContextImpl.forward(ProcessorContextImpl.java:129)
+	at org.apache.kafka.streams.processor.internals.ProcessorContextImpl.forward(ProcessorContextImpl.java:93)
+	at org.apache.kafka.streams.processor.internals.SourceNode.process(SourceNode.java:84)
+	at org.apache.kafka.streams.processor.internals.StreamTask.process(StreamTask.java:351)
+	at org.apache.kafka.streams.processor.internals.AssignedStreamsTasks.process(AssignedStreamsTasks.java:104)
+	at org.apache.kafka.streams.processor.internals.TaskManager.process(TaskManager.java:413)
+	at org.apache.kafka.streams.processor.internals.StreamThread.runOnce(StreamThread.java:862)
+	at org.apache.kafka.streams.processor.internals.StreamThread.runLoop(StreamThread.java:777)
+	at org.apache.kafka.streams.processor.internals.StreamThread.run(StreamThread.java:747)
+### Stopping TopicRekey Application ###
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ java -jar target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar 
+*** Starting TopicRekey Application ***
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Exception in thread "live-demo-v0.1.0-0c294890-ae1e-46c2-b956-8f61d49807b7-StreamThread-1" java.lang.ArrayIndexOutOfBoundsException: 1
+	at streams.topicRekey.lambda$getTopology$1(topicRekey.java:48)
+	at org.apache.kafka.streams.kstream.internals.KStreamImpl.lambda$internalSelectKey$29(KStreamImpl.java:185)
+	at org.apache.kafka.streams.kstream.internals.KStreamMap$KStreamMapProcessor.process(KStreamMap.java:41)
+	at org.apache.kafka.streams.processor.internals.ProcessorNode.process(ProcessorNode.java:115)
+	at org.apache.kafka.streams.processor.internals.ProcessorContextImpl.forward(ProcessorContextImpl.java:146)
+	at org.apache.kafka.streams.processor.internals.ProcessorContextImpl.forward(ProcessorContextImpl.java:129)
+	at org.apache.kafka.streams.processor.internals.ProcessorContextImpl.forward(ProcessorContextImpl.java:93)
+	at org.apache.kafka.streams.processor.internals.SourceNode.process(SourceNode.java:84)
+	at org.apache.kafka.streams.processor.internals.StreamTask.process(StreamTask.java:351)
+	at org.apache.kafka.streams.processor.internals.AssignedStreamsTasks.process(AssignedStreamsTasks.java:104)
+	at org.apache.kafka.streams.processor.internals.TaskManager.process(TaskManager.java:413)
+	at org.apache.kafka.streams.processor.internals.StreamThread.runOnce(StreamThread.java:862)
+	at org.apache.kafka.streams.processor.internals.StreamThread.runLoop(StreamThread.java:777)
+	at org.apache.kafka.streams.processor.internals.StreamThread.run(StreamThread.java:747)
+### Stopping TopicRekey Application ###
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< streams.JoinSample:streams-dsl-demo-matt >--------------
+[INFO] Building streams-dsl-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-dsl-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-dsl-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/topic-rekey/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-dsl-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-dsl-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/streams-dsl-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.460 s
+[INFO] Finished at: 2019-07-30T12:56:52-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ java -jar target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar 
+*** Starting TopicRekey Application ***
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^C### Stopping TopicRekey Application ###
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ mvn clean package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< streams.JoinSample:streams-dsl-demo-matt >--------------
+[INFO] Building streams-dsl-demo-matt 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ streams-dsl-demo-matt ---
+[INFO] Deleting /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ streams-dsl-demo-matt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ streams-dsl-demo-matt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/matthew.mangia/streams-dsl-demo/topic-rekey/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ streams-dsl-demo-matt ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ streams-dsl-demo-matt ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/streams-dsl-demo-matt-1.0.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5.2:single (assemble-all) @ streams-dsl-demo-matt ---
+[INFO] Building jar: /Users/matthew.mangia/streams-dsl-demo/topic-rekey/target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.983 s
+[INFO] Finished at: 2019-07-30T13:10:46-07:00
+[INFO] ------------------------------------------------------------------------
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ java -jar target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar 
+*** Starting TopicRekey Application ***
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^C### Stopping TopicRekey Application ###
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ pwd
+/Users/matthew.mangia/streams-dsl-demo/topic-rekey
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ java -jar target/streams-dsl-demo-matt-1.0-jar-with-dependencies.jar 
+*** Starting TopicRekey Application ***
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+^C### Stopping TopicRekey Application ###
+Matthew-Mangias-MBP15:topic-rekey matthew.mangia$ 
